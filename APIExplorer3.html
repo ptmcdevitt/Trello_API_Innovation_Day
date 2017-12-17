@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Trello Api Explorer</title>
+    <meta name="description" content="A fun tool to help you play with and learn the Trello API" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/Styles/Theme.css">
+
+    <style>
+        html {
+            font-size: 14px;
+        }
+    </style>
+
+    
+    <style>
+        pre {
+            overflow-x: hidden;
+            white-space: pre-wrap;
+        }
+        .blockquote {
+            font-size: 1em;
+        }
+    </style>
+
+</head>
+<body role="document">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Trello Explorer</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="nav-item nav-link" href="/about">What is this?</a></li>
+                    <li><a class="nav-item nav-link" href="/">Explore your Trello!</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 m-y-2">
+                <h1 class="page-header">
+                    Trello API Explorer 
+                    <span class="text-muted more-muted">play with &amp; learn the <a href="https://trello.com/b/cI66RoQS/trello-public-api" target="_blank">Trello API</a></span>
+                </h1> 
+            </div>
+        </div>
+
+        
+
+
+<main class="container">
+
+    <div ng-controller="utilitiesController">
+        <div class="row" ng-show="loading">
+            <div class="col-sm-12 text-xs-center">
+                <i class="fa fa-spinner fa-pulse fa-5x"></i>
+            </div>
+        </div>
+
+        <div class="row ng-hide" ng-show="!isLoggedIn">
+            <div class="col-sm-12 text-xs-center">
+                <p>
+                    <button ng-click="logIn()" class="btn btn-success btn-lg">Start by authorising Trello!</button>
+                </p>
+                <p>
+                    <a href="/about">or find out more...</a>
+                </p>
+            </div>
+        </div>
+            <div class="row ng-hide" ng-show="isLoggedIn">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#boards" aria-controls="boards" role="tab" data-toggle="tab">Boards</a></li>
+                    <li role="presentation"><a href="#lists" aria-controls="lists" role="tab" data-toggle="tab">Lists</a></li>
+                    <li role="presentation"><a href="#labels" aria-controls="labels" role="tab" data-toggle="tab">Labels</a></li>
+                    <li role="presentation"><a href="#cards" aria-controls="cards" role="tab" data-toggle="tab">Cards</a></li>
+                    <li role="presentation" class="tab-right"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Setup</a></li>
+                </ul>
+
+                 <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="boards">
+                        <div class="row m-t-2" ng-cloak>
+                            <div class="col-sm-12">
+                                <table class="table table-sm table-bordered table-striped">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Last_Activity</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="board in boards | orderBy:'pos'">
+                                            <td>{{board.id}}</td>
+                                            <td><a ng-href="{{board.url}}">{{board.name}}</a></td>
+                                            <td>{{board.dateLastActivity | date}}</td>
+                                            <td><button type="button" class="btn btn-secondary-outline btn-sm" ng-click="viewJson(board)" title="View JSON"><i class="fa fa-code"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="lists">
+                        <div class="row m-t-2" ng-cloak>
+                            <div class="col-sm-12">
+                                <fieldset class="form-group">
+                                    <label for="listsBoardSelect">Select a board</label>
+                                    <select class="form-control" id="listsBoardSelect" ng-model="listsBoardId">
+                                        <option value="">---Please select---</option>
+                                        <option ng-repeat="board in boards | orderBy:'name'" value="{{board.id}}">
+                                            {{board.name}}
+                                        </option>
+                                    </select>
+                                </fieldset>
+                                <table class="table table-sm table-bordered table-striped">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="list in lists| orderBy:'pos'">
+                                            <td>{{list.id}}</td>
+                                            <td>{{list.name}}</td>
+                                            <td><button type="button" class="btn btn-secondary-outline btn-sm" ng-click="viewJson(list)" title="View JSON"><i class="fa fa-code"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="labels">
+                        <div class="row m-t-2" ng-cloak>
+                            <div class="col-sm-12">
+                                <fieldset class="form-group">
+                                    <label for="labelsBoardSelect">Select a board</label>
+                                    <select class="form-control" id="labelsBoardSelect" ng-model="labelsBoardId">
+                                        <option value="">---Please select---</option>
+                                        <option ng-repeat="board in boards | orderBy:'name'" value="{{board.id}}">
+                                            {{board.name}}
+                                        </option>
+                                    </select>
+                                </fieldset>
+                                <table class="table table-sm table-bordered table-striped">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Colour</th>
+                                            <th>Name</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="label in labels| orderBy:'pos'">
+                                            <td>{{label.id}}</td>
+                                            <td>
+                                                <div style="width: 40px; background-color: {{label.color}}; border: 2px solid black; ">&nbsp;</div>
+                                            </td>
+                                            <td>{{label.name}}</td>
+                                            <td><button type="button" class="btn btn-secondary-outline btn-sm" ng-click="viewJson(label)" title="View JSON"><i class="fa fa-code"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="cards">
+                        <div class="row m-t-2" ng-cloak>
+                            <div class="col-sm-12">
+                                <fieldset class="form-group">
+                                    <label for="cardsBoardSelect">Select a board</label>
+                                    <select class="form-control" id="cardsBoardSelect" ng-model="cardsBoardId">
+                                        <option value="">---Please select---</option>
+                                        <option ng-repeat="board in boards | orderBy:'name'" value="{{board.id}}">
+                                            {{board.name}}
+                                        </option>
+                                    </select>
+                                </fieldset>
+                                <table class="table table-sm table-bordered table-striped">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Desc</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="card in cards | orderBy:'pos'">
+                                            <td>{{card.id}}</td>
+                                            <td>{{card.name}}</td>
+                                            <td ng-bind-html="card.desc | markdown"></td>
+                                            <td><button type="button" class="btn btn-secondary-outline btn-sm" ng-click="viewJson(card)" title="View JSON"><i class="fa fa-code"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row m-t-2" ng-cloak>
+                            <div class="col-sm-12">
+                                <fieldset class="form-group">
+                                    <button class="btn btn-secondary" ng-click="logOut()">Deauthoise Trello</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+</main>
+
+
+
+    </div>
+
+
+    <footer class="footer">        
+        
+        <div class="container">
+<!-- I got these buttons from simplesharebuttons.com -->
+<p class="share-buttons">
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=http://trelloapiexplorer.com" target="_blank"><img src="/imgs/share_icons/facebook.png" alt="Facebook" /></a>
+
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://trelloapiexplorer.com" target="_blank"><img src="/imgs/share_icons/linkedin.png" alt="LinkedIn" /></a>
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url=http://trelloapiexplorer.com&amp;text=Trello%20API%20Explorer&amp;hashtags=trello&amp;" target="_blank"><img src="/imgs/share_icons/twitter.png" alt="Twitter" /></a>
+
+
+</p>
+
+
+            <p class="us text-muted">made by <a href="http://www.happyporch.com">HappyPorch</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+    <script src="https://cdn.rawgit.com/paulmillr/es6-shim/master/es6-shim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.0.1/markdown-it.min.js"></script>
+    <script src="/Scripts/helpers.js"></script>
+    <script src="/Scripts/trello.js"></script>
+    <script src="/Scripts/angular.js"></script>
+
+    
+    <script>
+        var authenticationSuccess = function () { console.log("Successful authentication"); };
+        var authenticationFailure = function () { console.log("Failed authentication"); };
+
+        app.controller("utilitiesController", [
+            '$scope', '$rootScope', function ($scope, $rootScope) {
+                $scope.loading = false;
+
+                Trello.authorize({
+                    interactive: false,
+                    success: authenticationSuccess
+                });
+
+                $scope.isLoggedIn = Trello.authorized();
+
+                $scope.logIn = function () {
+                    Trello.authorize({
+                        name: "TrelloAPIExplorer.com",
+                        scope: {
+                            read: true
+                        },
+                        //expiration: "never",
+                        success: authenticationSuccess,
+                        error: authenticationFailure
+                    });
+                };
+
+                if ($scope.isLoggedIn) {
+                    Trello.get("/members/me/boards", trelloSuccess, trelloError).then(function (boards) {
+                        $scope.boards = boards;
+                        $scope.$apply();
+                    });
+
+                    $scope.viewJson = function (object) {
+                        $rootScope.$broadcast("viewJson", object);
+                    }
+
+                    $scope.$watch("listsBoardId", function (boardId) {
+                        if (boardId) {
+                            Trello.get("/boards/" + boardId + "/lists", trelloSuccess, trelloError).then(function (lists) {
+                                $scope.lists = lists;
+                                $scope.$apply();
+                            });
+                        } else {
+                            $scope.lists = [];
+                        }
+                    });
+
+                    $scope.$watch("labelsBoardId", function (boardId) {
+                        if (boardId) {
+                            Trello.get("/boards/" + boardId + "/labels", trelloSuccess, trelloError).then(function (labels) {
+                                $scope.labels = labels;
+								$scope.sortType     = ''; // set the default sort type
+								$scope.sortReverse  = false;  // set the default sort order
+								$scope.searchBoard   = '';     // set the default search/filter term
+								$scope.$apply();
+                            });
+                        } else {
+                            $scope.labels = [];
+                        }
+                    });
+
+                    $scope.$watch("cardsBoardId", function (boardId) {
+                        if (boardId) {
+                            Trello.get("/boards/" + boardId + "/cards", trelloSuccess, trelloError).then(function (cards) {
+                                $scope.cards = cards;
+                                $scope.$apply();
+                            });
+                        } else {
+                            $scope.cards = [];
+                        }
+                    });
+
+                    $scope.logOut = function () {
+                        Trello.deauthorize();
+                        $scope.isLoggedIn = false;
+                    };
+                }
+            }
+        ]);
+
+        app.controller("jsonViewerController", [
+            "$scope", function ($scope) {
+                $scope.$on("viewJson", function (event, data) {
+                    $scope.object = data;
+                    $('#jsonView').modal('show');
+                });
+            }
+        ]);
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="jsonView" tabindex="-1" role="dialog" ng-controller="jsonViewerController">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">JSON viewer</h4>
+                </div>
+                <div class="modal-body">
+                    <pre>
+{{object | json}}
+                    </pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44063073-6', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>

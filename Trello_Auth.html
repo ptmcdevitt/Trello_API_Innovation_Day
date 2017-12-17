@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Trello API</title>
+  </head>
+  <body>
+
+  </body>
+  
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>  
+  
+<script>
+/*
+First, let's define what happens when authentication has finished using success and failure callbacks.
+ */
+var authenticationSuccess = function() { console.log('Successful authentication'); };
+var authenticationFailure = function() { console.log('Failed authentication'); };
+*/
+Authenticate and Authorize your user
+Now let's attempt authentication and authorization in one step.
+/*
+Trello.authorize({
+  type: 'popup',
+  name: 'Getting Started Application',
+  scope: {
+    read: 'true',
+    write: 'true' },
+  expiration: 'never',
+  success: authenticationSuccess,
+  error: authenticationFailure
+});
+
+</script>  
+</html>

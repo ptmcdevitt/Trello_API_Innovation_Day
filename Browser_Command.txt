@@ -1,0 +1,6 @@
+ https://trello.com/1/members/my/cards?key=substitutewithyourapplicationkey&token=substitutethispartwiththeauthorizationtokenthatyougotfromtheuser
+ 
+ ar basicToken = 'ad28f08f7415f13cf26d71c46ccf02945ceec22dc399f7de744cc1e1d3445565';
+var storedKey = 'e5931afdfaa939722b379acd49eb5a61';
+
+ https://trello.com/1/members/my/cards?key=e5931afdfaa939722b379acd49eb5a61&token=ad28f08f7415f13cf26d71c46ccf02945ceec22dc399f7de744cc1e1d3445565

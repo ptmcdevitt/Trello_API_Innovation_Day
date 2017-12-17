@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <head>
+    <title>A Trello Dashboard Cards by Board</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+    <link rel="favicon.ico" href="">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard - Cards by Board</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+          
+         
+        </div>
+        
+        
+      </form>
+      
+      <div id="labels">
+       <table id="example" class="display" class="data-toggle" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Desc</th>
+             </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Desc</th>
+             </tr>
+        </tfoot>
+    </table> 
+      </div>
+    </div> 
+  </body>
+
+   <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
+   <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+  <script type="text/javascript">
+    var loadedBoards = function(boards) {
+      $.each(boards, function(index, value) {
+        $('#boards')
+          .append($("<option></option>")
+          .attr("value",value.id)
+          .text(value.name)); 
+      });
+    };
+
+    var loadBoards = function() {
+      //Get the users boards
+      Trello.get(
+        '/members/me/boards/',
+        loadedBoards,
+        function() { console.log("Failed to load boards"); }
+      );
+    };
+ 
+  var loadedLabels = function(labels) {
+      $.each(labels, function(index, label) {
+        var label = $("<p><span class='badge' style='background:" + label.color + ";'>" + label.uses + "</span> " + label.name + "</p>");
+        $('#labels').append(label)
+      });
+    };
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#labels').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/labels',
+        loadedLabels,
+        function() { console.log("Failed to load labels"); }
+      );
+    });   
+    
+    var loadedLabels = function(labels) {
+      $.each(labels, function(index, label) {
+        var label = $('<tr>'+
+            '<td>Full name:</td>'+
+            '<td>'+label.name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>desc:</td>'+
+            '<td>'+label.desc+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extra info:</td>'+
+            '<td>And any further details here (images etc)...</td>'+
+        '</tr>');
+        $('#example').append(label)
+      });
+    };
+ /*
+   $('#example').DataTable(
+  '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Full name:</td>'+
+            '<td>'+d.name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extension number:</td>'+
+            '<td>'+d.extn+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Extra info:</td>'+
+            '<td>And any further details here (images etc)...</td>'+
+        '</tr>'+
+    '</table>';
+ var label = $("<p><span class='badge' style='background:" + label.color + ";'>" + label.name + "</span> " + label.desc + "</p>");
+        $('#labels').append(label)   
+ */   
+
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#labels').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/cards',
+        loadedLabels,
+        function() { console.log("Failed to load lists"); }
+      );
+    });
+
+    
+    Trello.authorize({
+      type: "popup",
+      name: "Trello dashboard",
+      scope: {
+        read: true,
+        write: false },
+      expiration: "never",
+      success: loadBoards,
+      error: function() { console.log("Failed authentication"); }
+    });
+ </script>
+</html>

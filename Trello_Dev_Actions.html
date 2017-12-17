@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <head>
+    <title>A Trello Dashboard Lists by Board</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="favicon.ico" href="">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard - Lists by Board</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      
+      <div id="list" style="color:red"></div>
+	  
+	  	 
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+     <script type="text/javascript">
+	 // <div id="cards" ></div>
+        var cache = {};
+            $(function(){
+                function primeCache() {
+                    $('option').each(function(idx, option) {
+                        var boardId = $(option).val();
+                        cache[boardId] = {};
+                        Trello.get(
+                            '/boards/' + boardId + '/actions',
+                            function(actions) {
+                                cache[boardId].actions = actions;
+                            },
+                            function() { console.log("Failed to load actions"); }
+                        );
+                        Trello.get(
+                            '/boards/' + boardId + '/cards',
+                            function(cards) {
+                                cache[boardId].cards = cards;
+                            },
+                            function() { console.log("Failed to load cards"); }
+                        );
+                    });
+                }
+    
+                var loadedBoards = function(boards) {
+                  $.each(boards, function(index, value) {
+                    $('#boards')
+                      .append($("<option></option>")
+                      .attr("value",value.id)
+                      .text(value.name));
+                  });
+    
+                  primeCache();
+                };
+                var loadBoards = function() {
+                  //Get the users boards
+                  Trello.get(
+                    // '/organizations/59653501f255607efd3a12d3/boards/',
+					'/members/me/boards/',
+                    loadedBoards,
+                    function() { console.log("Failed to load boards"); }
+                  );
+                };
+    
+                var loadedActions = function(actions) {
+                  $.each(actions, function(index, action) {
+                    var action = $("<div id='action' class='action0'>" +
+                                         "<div class='action1' style='color:green' >"
+                                            + "List: " + (action.data.list ? action.data.list : '') +
+                                         '</div>' +
+                                         "<div style='color:blue' class='action3" + (action.type ? (' ') : 'hidden') + "'>"
+                                            + (action.type ? (action.type) : '') +
+                                        "</div>" +
+                                    '</div>');
+                    $('#actions').append(actions)
+                  });
+                };
+    
+                var loadedCards = function(cards) {
+                  $.each(cards, function(index, card) {
+                    var cardObj = $("<div id='' class='cards'>" +
+                                        "<div class='badge" + (card.labels.length > 0 ? (' ' + card.labels[0].color) : 'hidden') + "'>"
+                                            + (card.labels.length > 0 ? (card.labels[0].name) : '') +
+                                        "</div>" +
+                                        "<div class='cardvotes' style='color:green' >"
+                                            + "Votes: " + (card.badges.votes ? card.badges.votes : '') +
+                                        '<div class="cardtitle"><a rel="nofollow" rel="noreferrer"target="_blank" href=' + card.shortUrl + '>' + card.name + '</a>' +
+                                        '</div>' +
+                                        "<div style='color:blue' class='cardcontent" + (card.desc ? (' ') : 'hidden') + "'>"
+                                            + (card.desc ? (card.desc) : '') +
+                                        "</div>" +
+                                    '</div>');
+                    $('#cards' + card.idList).append(cardObj);
+                    console.log(card.idList)
+                  });
+                };
+    
+                $('#boards').change(function() {
+                  var boardId = $("option:selected", this).val();
+                  $('#actions').empty();
+    
+                  var data = cache[boardId];
+                  loadedActions(data.actions);
+                  loadedCards(data.cards);
+    
+                  // Trello.get(
+                  //   '/boards/' + boardId + '/lists',
+                  //   loadedLists,
+                  //   function() { console.log("Failed to load lists"); }
+                  // );
+    
+                  // Trello.get(
+                  //   '/boards/' + boardId + '/cards',
+                  //   loadedCards,
+                  //   function() { console.log("Failed to load cards"); }
+                  // );
+                });
+    
+                Trello.authorize({
+                  type: "popup",
+                  name: "Trello dashboard",
+                  scope: {
+                    read: true,
+                    write: false },
+                  expiration: "never",
+                  success: loadBoards,
+                  error: function() { console.log("Failed authentication"); }
+                });
+            });
+    </script>
+ </html>

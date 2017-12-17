@@ -1,0 +1,30 @@
+    bootstrap.css Failed to load resource: the server responded with a status of 404 (Not Found)
+patterns2.js Failed to load resource: the server responded with a status of 404 (Not Found)
+classie.js Failed to load resource: the server responded with a status of 404 (Not Found)
+styles-v2.css Failed to load resource: the server responded with a status of 404 (Not Found)
+bootstrap-theme.css Failed to load resource: the server responded with a status of 404 (Not Found)
+lightbox.js Failed to load resource: the server responded with a status of 404 (Not Found)
+bootstrap.css Failed to load resource: the server responded with a status of 404 (Not Found)
+bootstrap-theme.css Failed to load resource: the server responded with a status of 404 (Not Found)
+styles-v2.css Failed to load resource: the server responded with a status of 404 (Not Found)
+patterns2.js Failed to load resource: the server responded with a status of 404 (Not Found)
+classie.js Failed to load resource: the server responded with a status of 404 (Not Found)
+lightbox.js Failed to load resource: the server responded with a status of 404 (Not Found)
+Trello_Dev_Code1.html:80 Uncaught ReferenceError: patterns is not defined
+    at HTMLDocument.<anonymous> (Trello_Dev_Code1.html:80)
+    at j (jquery.min.js:2)
+    at Object.fireWith [as resolveWith] (jquery.min.js:2)
+    at Function.ready (jquery.min.js:2)
+    at HTMLDocument.I (jquery.min.js:2)
+favicon.ico Failed to load resource: the server responded with a status of 404 (Not Found)
+Trello_Dev_Code1.html:42 Uncaught ReferenceError: classie is not defined
+    at HTMLButtonElement.showLeftPush1.onclick (Trello_Dev_Code1.html:42)
+Trello_Dev_Code1.html:42 Uncaught ReferenceError: classie is not defined
+    at HTMLButtonElement.showLeftPush1.onclick (Trello_Dev_Code1.html:42)
+Trello_Dev_Code1.html:54 Uncaught ReferenceError: classie is not defined
+    at HTMLButtonElement.showRightPush.onclick (Trello_Dev_Code1.html:54)
+Trello_Dev_Code1.html:42 Uncaught ReferenceError: classie is not defined
+    at HTMLButtonElement.showLeftPush1.onclick (Trello_Dev_Code1.html:42)
+bootstrap.css Failed to load resource: the server responded with a status of 404 (Not Found)
+bootstrap-theme.css Failed to load resource: the server responded with a status of 404 (Not Found)
+styles-v2.css Failed to load resource: the server responded with a status of 404 (Not Found)

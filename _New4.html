@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      
+      <div id="actions"></div>
+    </div> 
+  </body>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=e5931afdfaa939722b379acd49eb5a61"></script>
+  
+  <script type="text/javascript">
+    var loadedBoards = function(boards) {
+      $.each(boards, function(index, value) {
+        $('#boards')
+          .append($("<option></option>")
+          .attr("value",value.id)
+          .text(value.name)); 
+      });
+    };
+
+    var loadBoards = function() {
+      //Get the users boards
+      Trello.get(
+        '/members/me/boards/',
+        loadedBoards,
+        function() { console.log("Failed to load boards"); }
+      );
+    };
+    
+ 
+     var loadedActions = function(actions) {
+      $.each(actions, function(index, action) {
+        var action = $("<p><span class='badge' style='background:" + action.id + ";'>" + action.type + "</span> " + action.date + "</p>");
+        $('#actions').append(action)
+      });
+    };
+
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#actions').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/actions&filter=updateCard:idList',
+        loadedActions,
+        function() { console.log("Failed to load Actions"); }
+      );
+    });
+    
+    Trello.authorize({
+      type: "popup",
+      name: "Trello dashboard",
+      scope: {
+        read: true,
+        write: false },
+      expiration: "never",
+      success: loadBoards,
+      error: function() { console.log("Failed authentication"); }
+    });
+  </script>
+</html>

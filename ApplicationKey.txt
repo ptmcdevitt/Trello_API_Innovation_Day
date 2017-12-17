@@ -1,0 +1,105 @@
+Key: e5931afdfaa939722b379acd49eb5a61
+Secret: 8ce453ffb22e643379d260e305fd6afbbe5e0d54c50ae46e1dae16bf66b90e12
+Token:  1285b1818af66d05a6edfdba1bc4a72a6a85bdfbbfa4305ae517560e272a6ab9
+https://trello.com/1/authorize?expiration=never&name=SinglePurposeToken&key=REPLACEWITHYOURKEY
+https://trello.com/1/authorize 
+ https://trello.com/1/OAuthGetRequestToken
+https://trello.com/1/OAuthAuthorizeToken
+https://trello.com/1/OAuthGetAccessToken
+var authenticationSuccess = function() { console.log('Successful authentication'); };
+var authenticationFailure = function() { console.log('Failed authentication'); };
+ Trello.authorize({
+  type: 'popup',
+  name: 'Getting Started Application',
+  scope: {
+    read: 'true',
+    write: 'true' },
+  expiration: 'never',
+  success: authenticationSuccess,
+  error: authenticationFailure
+});
+ It should have a short URL that looks like
+
+https://trello.com/c/DcqBrqdx/1-target-card
+Take that URL and add .json to the end as follows:
+
+https://trello.com/c/DcqBrqdx/1-target-card.json
+
+var myList = INSERT YOUR IDLIST HERE';
+var creationSuccess = function(data) {
+  console.log('Card created successfully. Data returned:' + JSON.stringify(data));
+};
+var newCard = {
+  name: 'New Test Card', 
+  desc: 'This is the description of our new card.',
+  // Place this card at the top of our list 
+  idList: myList,
+  pos: 'top'
+};
+Trello.post('/cards/', newCard, creationSuccess);
+
+ Trello.put('/cards/[ID]', {name: 'New Test Card'});
+ 
+ // Get all of the information about the boards you have access to
+
+var success = function(successMsg) {
+  asyncOutput(successMsg);
+};
+
+var error = function(errorMsg) {
+  asyncOutput(errorMsg);
+};
+
+Trello.get('/member/me/boards', success, error);
+
+<html>
+  <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Trello Dashboard</h1>
+        <!-- We will be putting our dashboard right here -->
+    </div> 
+  </body>
+  
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    //This is where out JS code will go
+    
+  </script>
+</html>		
+
+ <html>
+  <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard</h1>
+      <!-- We will be putting our dashboard right here -->
+    </div> 
+  </body>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <!-- REPLACE AppKey WITH YOUR APPLICATION KEY -->
+  <script src="https://api.trello.com/1/client.js?key=e5931afdfaa939722b379acd49eb5a61"></script>
+  
+  <script type="text/javascript">
+    Trello.authorize({
+      type: "popup",
+      name: "Trello dashboard",
+      scope: {
+        read: true,
+        write: false 
+      },
+      expiration: "never",
+      success: function() { console.log("Successful authentication"); },
+      error: function() { console.log("Failed authentication"); }
+    });
+  </script>
+</html>
+
+ 

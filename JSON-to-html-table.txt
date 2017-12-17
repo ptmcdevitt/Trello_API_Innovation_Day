@@ -1,0 +1,4 @@
+extract JSON array data
+http://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
+http://www.encodedna.com/angularjs/tutorial/bind-json-data-to-html-table-in-angularjs-using-ngrepeat.htm
+
