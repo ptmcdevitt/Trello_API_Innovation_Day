@@ -1,0 +1,24 @@
+Original Code _new2.html 
+
+var loadedActions = function(actions) {
+      $.each(actions, function(index, action) {
+        var action = $("<p><span class='badge' style='background:" + action.id + ";'>"
+        + action.data.card.idShort + "</span> " + "............card: " + action.data.card.name + 
+        " Enddate: " + FormatDateTime(action.date,vbShortDate) +
+        " StartDate: " + FormatDateTime(Date(1000*parseInt((action.data.card.id).substring(0,8),16)),vbShortDate) +
+        " listAfter: " + action.data.listAfter.name + " listBefore: " + action.data.listBefore.name +
+        " DateDiff Days: " + DateDiff("d",FormatDateTime(Date(1000*parseInt((action.data.card.id).substring(0,8),16)),vbShortDate),FormatDateTime(action.date,vbShortDate))+
+        "</p>");
+        $('#actions').append(action)
+      });
+    };
+
+Modified string statement:
+
+var action = $("<p><span class='badge' style='background:" + action.id + ";'>"
+        + 'Card# ' + action.data.card.idShort + "</span> " + "   " + action.data.card.name + 
+        " changed on " + FormatDateTime(action.date,vbShortDate) +
+        " and was born on " + FormatDateTime(Date(1000*parseInt((action.data.card.id).substring(0,8),16)),vbShortDate) +
+        " arriving on this list -" + action.data.listAfter.name + " from this list-" + action.data.listBefore.name +
+        " for this number of elapsed days -" + DateDiff("d",FormatDateTime(Date(1000*parseInt((action.data.card.id).substring(0,8),16)),vbShortDate),FormatDateTime(action.date,vbShortDate))*-1 +
+        "</p>");

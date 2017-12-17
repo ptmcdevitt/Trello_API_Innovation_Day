@@ -1,0 +1,2736 @@
+mcdevpa@gmail.com
+API Key:  22fbb4e676e9a972cb2f56f30e7530f3
+C:\Users\Patrick\Desktop\my-git-repo\Fiddle_Trello_Auth.html
+C:\Users\Patrick\Desktop\my-git-repo\Corrello_Blog_code_Original.html
+
+ https://api.trello.com/1/boards/58cae0c3d79fec0b737c1aef/actions/?filter=updateCard:idList&key=22fbb4e676e9a972cb2f56f30e7530f3&token=c1672c4d0d7bb163a57c05d504c6b34b265c0ba063ab996203180d1f0357415f
+ 
+ [{
+    "id": "596f7ae4657fe3faa9f76de3",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "plugin": {
+            "url": "https://voting.trello.services/manifest.json",
+            "public": true,
+            "name": "Voting",
+            "id": "55a5d917446f517774210013"
+        }
+    },
+    "type": "enablePlugin",
+    "date": "2017-07-19T15:29:40.344Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb27b1004a142f96944f0",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "idMemberAdded": "5617f7381558b2ecec71cd21",
+        "memberType": "normal"
+    },
+    "type": "addMemberToBoard",
+    "date": "2017-07-17T12:50:03.736Z",
+    "member": {
+        "id": "5617f7381558b2ecec71cd21",
+        "avatarHash": "90d7a66301582ffdbcee0da27aef9843",
+        "fullName": "Chris Stahl",
+        "initials": "CS",
+        "username": "chrisstahl"
+    },
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb260f486dc1bea42def1",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "idMemberAdded": "539ef65ed726098ed45afb94",
+        "memberType": "normal"
+    },
+    "type": "addMemberToBoard",
+    "date": "2017-07-17T12:49:36.376Z",
+    "member": {
+        "id": "539ef65ed726098ed45afb94",
+        "avatarHash": "a6811dbde1795dba8d0df0ea73d37619",
+        "fullName": "Chip Benedum",
+        "initials": "CB",
+        "username": "chipbenedum"
+    },
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb258f556c6834b1148ca",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "idMemberAdded": "511d4d6e96da1616500003fb",
+        "memberType": "normal"
+    },
+    "type": "addMemberToBoard",
+    "date": "2017-07-17T12:49:28.490Z",
+    "member": {
+        "id": "511d4d6e96da1616500003fb",
+        "avatarHash": "43c6e88b012e0079824376007e585aae",
+        "fullName": "Joseph Knapp",
+        "initials": "JK",
+        "username": "josephknapp"
+    },
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb1dbb14b6ddb440f8691",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "idMemberAdded": "57760f4c93e4d28d05fd2ae9",
+        "memberType": "normal"
+    },
+    "type": "addMemberToBoard",
+    "date": "2017-07-17T12:47:23.166Z",
+    "member": {
+        "id": "57760f4c93e4d28d05fd2ae9",
+        "avatarHash": null,
+        "fullName": "Tom Willson",
+        "initials": "TW",
+        "username": "tomwillson1"
+    },
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb15764d6aea8eb4d4210",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "name": "Team Agreement (18)",
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "x6pVtDhj",
+            "idShort": 17,
+            "name": "HOT BLENDERS NORMS AND AGREEMENTS",
+            "id": "5874460060997a8194d55994",
+            "closed": true
+        },
+        "old": {
+            "closed": false
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-17T12:45:11.223Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb0f33a4745f21c143ed3",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "member": {
+            "name": "Patrick \"Mac\" McDevitt",
+            "id": "58455e54d2af08b28d091009"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "boardSource": {
+            "id": "58627fda6c2d895766326e54"
+        },
+        "list": {
+            "name": "Team Agreement (18)",
+            "id": "586daacb3fe6d5319a51b6a0"
+        }
+    },
+    "type": "moveListToBoard",
+    "date": "2017-07-17T12:43:31.343Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596cb0a2d026513b986435d4",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        }
+    },
+    "type": "createBoard",
+    "date": "2017-07-17T12:42:10.421Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5893657e6293034c8b11a5a7",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "x6pVtDhj",
+            "idShort": 68,
+            "name": "HOT BLENDERS NORMS AND AGREEMENTS",
+            "id": "5874460060997a8194d55994"
+        },
+        "old": {
+            "name": "COMBINED BIT BENDERS / THE NEW HOTNESS NORMS AND AGREEMENTS"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-02-02T16:59:42.909Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58936545765e1ef935fd8303",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "Siy0zSGF",
+            "idShort": 120,
+            "name": "Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abiliities, the resources available, and the situation at hand",
+            "id": "58936534028048d2ffdd5303"
+        },
+        "old": {
+            "name": "Regardless of what we discover, we understand and truly belive3 that everyone did the best job they could, given what they knew at the time, their skills and abiliities, the resources available, and the situation at hand"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-02-02T16:58:45.360Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58936534028048d2ffdd5304",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "Siy0zSGF",
+            "idShort": 120,
+            "name": "Regardless of what we discover, we understand and truly belive3 that everyone did the best job they could, given what they knew at the time, their skills and abiliities, the resources available, and the situation at hand",
+            "id": "58936534028048d2ffdd5303"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-02-02T16:58:28.074Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5874460060997a8194d55995",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "x6pVtDhj",
+            "idShort": 68,
+            "name": "COMBINED BIT BENDERS / THE NEW HOTNESS NORMS AND AGREEMENTS",
+            "id": "5874460060997a8194d55994"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:25:04.421Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587445b3af3b39bd765b5b7d",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "yVCfUBU5",
+            "idShort": 67,
+            "name": "Make it known when then PO is needed (mark on main boards, tell IM)",
+            "id": "587445b3af3b39bd765b5b7c"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:23:47.934Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587445645bfc3ece60424e9a",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "rEsKc9pi",
+            "idShort": 66,
+            "name": "If it is important, don't wait to meet",
+            "id": "587445645bfc3ece60424e99"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:22:28.557Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5874454298c2cec2b9717b89",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "jEYl6f1R",
+            "idShort": 65,
+            "name": "We will hold a Retro every two weeks",
+            "id": "5874454298c2cec2b9717b88"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:21:54.066Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587444f94f7dcaea7ea38c28",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "yd6vcHTV",
+            "idShort": 64,
+            "name": "We will share knowledge and educate ourselves through team discussions, lightening talks, Lunch N Learns and other means",
+            "id": "587444f94f7dcaea7ea38c27"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:20:41.180Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5874449b9cc07a73e3b3fc30",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "1QGaeg0A",
+            "idShort": 63,
+            "name": "Code review is done be nature of pairing but people outside the pair can be requested for review",
+            "id": "587444872be1eb801cd60a1a"
+        },
+        "old": {
+            "name": "Code review is done be nature of pairing people outside the pair can be requested for review"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-01-10T02:19:07.050Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587444872be1eb801cd60a1b",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "1QGaeg0A",
+            "idShort": 63,
+            "name": "Code review is done be nature of pairing people outside the pair can be requested for review",
+            "id": "587444872be1eb801cd60a1a"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:18:47.191Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58744449bd4b411b86f9000f",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "GTgOFFbg",
+            "idShort": 62,
+            "name": "Solos (no one to pair with) can work across pairs",
+            "id": "58744449bd4b411b86f9000e"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:17:45.531Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587443ba4ddb4a9e0ee67543",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "lJc4r1JQ",
+            "idShort": 61,
+            "name": "People have the right to leave a story and pair respectfully and transit to another story",
+            "id": "587443ba4ddb4a9e0ee67542"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:15:22.350Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587443321fda2b7f0504dbd1",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "0c31FUr9",
+            "idShort": 60,
+            "name": "We value the importance of knowledge transfer no matter what it takes to accomplish",
+            "id": "587443321fda2b7f0504dbd0"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:13:06.360Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587442c38cfd0310c434465d",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "K4NEPbL7",
+            "idShort": 59,
+            "name": "Pairs are rotated",
+            "id": "5874428ac69ebf3925f409bb"
+        },
+        "old": {
+            "desc": ""
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-01-10T02:11:15.321Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5874428ac69ebf3925f409bc",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "K4NEPbL7",
+            "idShort": 59,
+            "name": "Pairs are rotated",
+            "id": "5874428ac69ebf3925f409bb"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:10:18.771Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58744256a07dd0940e7144ec",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "Jx44sju1",
+            "idShort": 58,
+            "name": "Interruptions: Team members are OK with asking them \"if they have 2 minutes\" and if the anser is \"Give me 5 minutes\"",
+            "id": "58744219a5388eea24f3acff"
+        },
+        "old": {
+            "name": "Interuptions: Team members are OK with asking them \"if they have 2 minutes\" and if the anser is \"Give me 5 minutes\""
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-01-10T02:09:26.612Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58744219a5388eea24f3ad00",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "Jx44sju1",
+            "idShort": 58,
+            "name": "Interuptions: Team members are OK with asking them \"if they have 2 minutes\" and if the anser is \"Give me 5 minutes\"",
+            "id": "58744219a5388eea24f3acff"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:08:25.044Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587441c197e0f4c817032eed",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "VIwI06fi",
+            "idShort": 57,
+            "name": "Our goal is to create GREAT software",
+            "id": "587441c197e0f4c817032eec"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:06:57.975Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "58744193bcdfa8af356f8872",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "7AViJdLl",
+            "idShort": 56,
+            "name": "At least 1 of the pair present at F4 card reviews at ET",
+            "id": "58744193bcdfa8af356f8871"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:06:11.894Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5874415bf73854e476da2308",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "aTAIEuuO",
+            "idShort": 55,
+            "name": "Fantastic 4 (card vetting) is comprised of PO, Dev pair, QA and UX when added",
+            "id": "5874415bf73854e476da2307"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:05:15.217Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587441288a6affaf4b882fb5",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "UFXwwGp1",
+            "idShort": 54,
+            "name": "This is a safe work environment",
+            "id": "587441288a6affaf4b882fb4"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:04:24.617Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587440c3ad0b66a060ef2c95",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "UXEd7MPG",
+            "idShort": 53,
+            "name": "We value EVERYONE'S opinion",
+            "id": "587440c3ad0b66a060ef2c94"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:02:43.109Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "587440937d371a898d24136c",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "list": {
+            "id": "586daacb3fe6d5319a51b6a0"
+        },
+        "board": {
+            "shortLink": "NYzYmROS",
+            "name": "Team Agreement",
+            "id": "596cb0a2d026513b986435d2"
+        },
+        "card": {
+            "shortLink": "hF6iaTjh",
+            "idShort": 52,
+            "name": "This is a respectful team - shows respect at all times",
+            "id": "587440937d371a898d24136b"
+        }
+    },
+    "type": "createCard",
+    "date": "2017-01-10T02:01:55.853Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}]                          [{
+    "id": "5971f7cbfa8f321beafa85d4",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "uaoN2odF",
+            "idShort": 353,
+            "name": "Date Sorts",
+            "id": "59711b2c84ff6cbb6ef209b0",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-21T12:47:07.377Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970d34f8cc8b9dd54e7950e",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "MaEyCaRl",
+            "idShort": 164,
+            "name": "(1) Load Test QA Environment",
+            "id": "58de589845499dac3d26a432",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:59:11.290Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970d30bdf388fecfc9067d9",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "rGkHNbpt",
+            "idShort": 340,
+            "name": "(1) Growth: Persist packaging on a closed and/or saved order",
+            "id": "59566a93fc7dc97d6a9f319d",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:58:03.898Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970d2b29a6de84c38497a66",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "kjE9SUhy",
+            "idShort": 339,
+            "name": "(1) Recovery for lost or unclosable orders",
+            "id": "59566a6fdb9820a34fae91da",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:56:34.262Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970d1223bdd6a6ef0afc7a1",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "BRd3aTFN",
+            "idShort": 352,
+            "name": "Max Length Validation",
+            "id": "5970d06c964193eaca549314",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:49:54.575Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970cd280e00310bf1299940",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "kMHbzzDQ",
+            "idShort": 331,
+            "name": "(1) Production Dynatrace",
+            "id": "5936171fbead1551229b7625",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:32:56.445Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970cd2413cd0677eee66d4f",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "9BjfvfNI",
+            "idShort": 330,
+            "name": "(1) Production Sitescope",
+            "id": "59361713dba192ce9c649311",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:32:52.856Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970cd221108c1f42dfd3c13",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "RBavhqSG",
+            "idShort": 329,
+            "name": "(1) Production Vulnerability test",
+            "id": "593616f59c37afba108ee81f",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:32:50.217Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970cc8f7fe47ef4cf6b1e49",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "iHWOld1l",
+            "idShort": 166,
+            "name": "(1) Diagnostics for QA Environment - DynaTrace",
+            "id": "58de58ce50babc6ec07dd737",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:30:23.659Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970cc8a5e9bc7e0cb8f4bc2",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "GU3uLgtj",
+            "idShort": 169,
+            "name": "(1) Implement Splunk",
+            "id": "58de593f41deb165f7860fab",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:30:18.487Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970c9d7dfa11386e6d2eef8",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "AScuRhof",
+            "idShort": 351,
+            "name": "Shop Order Due Date Not To Be Defaulted",
+            "id": "5970c96c8860564d1bf441f3",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T15:18:47.191Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970c4dc608283f6cb9a97ac",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "0auiihWw",
+            "idShort": 349,
+            "name": "Schedule Oracle demo",
+            "id": "5970c42c8860564d1bf43c69",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T14:57:32.907Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970c4bf267cdf846c05ecc0",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "ET",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "zNUtArzW",
+            "idShort": 350,
+            "name": "Testing for validation of blank fields on inbound Oracle order",
+            "id": "5970c4927b0859f4e5aa486f",
+            "idList": "58cae0c3d79fec0b737c1af3"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T14:57:03.310Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5970bf6e8ac30c4bdbb88b73",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done (33)",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "paMf8Xjr",
+            "idShort": 344,
+            "name": "(1) Spike: Determine the best approach for transmission and recovery of closed orders (4 days)",
+            "id": "59664b86da41ec9bdc47518d",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af1"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-20T14:34:22.700Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596f5dc29166f5d4f08e29f5",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "myH8VpeU",
+            "idShort": 337,
+            "name": "(1) Ship to country code",
+            "id": "594c2a5cd55c7be6ad872bed",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-19T13:25:22.031Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596f5d8e3a06adc608f1fbc7",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "yxkZUZ81",
+            "idShort": 343,
+            "name": "Fix payloads for order request & packaging language",
+            "id": "5966479f6422420e25c74beb",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-19T13:24:30.734Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596921eb201def68570d08a7",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "BRVGpngJ",
+            "idShort": 346,
+            "name": "Card",
+            "id": "59691fe98f89db04bb258162",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-14T19:56:27.438Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59665340a719a53f4ec86f33",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "EBAOkNlc",
+            "idShort": 345,
+            "name": "(1) Defect: As GBB, when I add multiple packaging with or without \"Total number used\" then I see that the packagingh line items are getting re-arranged on clicking Save (inconsistent issue)",
+            "id": "5966525aa437a5ad261049a3",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-12T16:50:08.775Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5966500a9bab65ec9af3ccdd",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "paMf8Xjr",
+            "idShort": 344,
+            "name": "Spike",
+            "id": "59664b86da41ec9bdc47518d",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-12T16:36:26.455Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59665005794595fb8e908000",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "kjE9SUhy",
+            "idShort": 339,
+            "name": "(1) Recovery for lost or unclosable orders",
+            "id": "59566a6fdb9820a34fae91da",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af1"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-12T16:36:21.827Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59664ff8041bf3acee0fb569",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "yxkZUZ81",
+            "idShort": 343,
+            "name": "Fix payloads for order request & packaging language",
+            "id": "5966479f6422420e25c74beb",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-12T16:36:08.049Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "596392f486581b17733e4f2e",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "kjE9SUhy",
+            "idShort": 339,
+            "name": "(1) Recovery for lost or unclosable orders",
+            "id": "59566a6fdb9820a34fae91da",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-10T14:45:08.045Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595a8547f9e073d2b8a86f32",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "t7DwOTdq",
+            "idShort": 342,
+            "name": "(1) Get Real Closed Batches into Global Blending from Mosaic",
+            "id": "595a7ba186453d8f7b6711e8",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-03T17:56:23.770Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595a6363594902a6d348a945",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "uodN0h4y",
+            "idShort": 178,
+            "name": "(1) Load Balance Prod environment",
+            "id": "58e551df7ca2daed88e715e9",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-03T15:31:47.214Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595a5cfa0a928fa02112f9b8",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Dev",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "7rjJda5q",
+            "idShort": 197,
+            "name": "(1) Send Closed Shop Order Info to ERP",
+            "id": "58f8c7b064fe39091e2e4362",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-03T15:04:26.976Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595a577b952848fd79b81a2c",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Track/Hold",
+            "id": "58cae0c3d79fec0b737c1af2"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "g6UnsVch",
+            "idShort": 326,
+            "name": "Update Chrome & Chrome driver on build servers",
+            "id": "59233ae4d516fbd3c3240572",
+            "idList": "58cae0c3d79fec0b737c1af2"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-07-03T14:40:59.356Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5956b3433457388a21f7da4d",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "PO Acceptance",
+            "id": "58cae0c3d79fec0b737c1af4"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "UxLJGMs3",
+            "idShort": 322,
+            "name": "(1) Delete Packaging Inventory",
+            "id": "591f39fa3e755f60d4d6eaf1",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af4"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T20:23:31.788Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5956b341e84daafdf011e753",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "PO Acceptance",
+            "id": "58cae0c3d79fec0b737c1af4"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "FoKEY73p",
+            "idShort": 321,
+            "name": "(1) Add packaging inventory",
+            "id": "591f39db8ae9a4327fb7fe3f",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af4"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T20:23:29.090Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5956834a6610fe29fa9244d3",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "akf0PH99",
+            "idShort": 341,
+            "name": "(1) Spike: Technology to send closed order to SOA",
+            "id": "595670adf053c3fcc150a682",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T16:58:50.224Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59567d46e3ce0cdf56b4b109",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "akf0PH99",
+            "idShort": 341,
+            "name": "(1) Spike: Technology to send closed order to SOA",
+            "id": "595670adf053c3fcc150a682",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T16:33:10.552Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59566e4877fa4d972d6ff923",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "PO Acceptance",
+            "id": "58cae0c3d79fec0b737c1af4"
+        },
+        "listBefore": {
+            "name": "ET",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "UxLJGMs3",
+            "idShort": 322,
+            "name": "(1) Delete Packaging Inventory",
+            "id": "591f39fa3e755f60d4d6eaf1",
+            "idList": "58cae0c3d79fec0b737c1af4"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af3"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T15:29:12.976Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59566e4663485462d71602be",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "PO Acceptance",
+            "id": "58cae0c3d79fec0b737c1af4"
+        },
+        "listBefore": {
+            "name": "ET",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "FoKEY73p",
+            "idShort": 321,
+            "name": "(1) Add packaging inventory",
+            "id": "591f39db8ae9a4327fb7fe3f",
+            "idList": "58cae0c3d79fec0b737c1af4"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af3"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T15:29:10.944Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59566b6562b3c4df4eea7f5f",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "kjE9SUhy",
+            "idShort": 339,
+            "name": "(0) Recovery for lost or unclosable orders",
+            "id": "59566a6fdb9820a34fae91da",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T15:16:53.653Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59566b5cb529414b7a9062eb",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "rGkHNbpt",
+            "idShort": 340,
+            "name": "(0) Persist packaging on a closed and/or saved order",
+            "id": "59566a93fc7dc97d6a9f319d",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T15:16:44.364Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59564aed88765ac897dcedd5",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "myH8VpeU",
+            "idShort": 337,
+            "name": "Card",
+            "id": "594c2a5cd55c7be6ad872bed",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T12:58:21.559Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595649b2b7b7c4d2d1b9ca54",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "ET (2)",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "listBefore": {
+            "name": "WIP",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "UxLJGMs3",
+            "idShort": 322,
+            "name": "(1) Delete Packaging Inventory",
+            "id": "591f39fa3e755f60d4d6eaf1",
+            "idList": "58cae0c3d79fec0b737c1af3"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af1"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T12:53:06.368Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "595649b00f11addf6cb44a1f",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "ET (2)",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "listBefore": {
+            "name": "WIP",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "FoKEY73p",
+            "idShort": 321,
+            "name": "(1) Add packaging inventory",
+            "id": "591f39db8ae9a4327fb7fe3f",
+            "idList": "58cae0c3d79fec0b737c1af3"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af1"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-30T12:53:04.108Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59525d6d2ea9b5268addcbf4",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "ET (2)",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "1s5TrWh7",
+            "idShort": 336,
+            "name": "Card",
+            "id": "594a766c667d7dc40309c4db",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af3"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-27T13:28:13.825Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594c0fda07dcbd3d5c1b3614",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "WIP",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "UxLJGMs3",
+            "idShort": 322,
+            "name": "(1) Delete Packaging Inventory",
+            "id": "591f39fa3e755f60d4d6eaf1",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-22T18:43:38.223Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594c0fca3bcc60e31a569ce1",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "ET (2)",
+            "id": "58cae0c3d79fec0b737c1af3"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "1s5TrWh7",
+            "idShort": 336,
+            "name": "Card",
+            "id": "594a766c667d7dc40309c4db",
+            "idList": "58cae0c3d79fec0b737c1af3"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-22T18:43:22.818Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594a7689438df878c91695c6",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "1s5TrWh7",
+            "idShort": 336,
+            "name": "Card",
+            "id": "594a766c667d7dc40309c4db",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-21T13:37:13.534Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594984683818f9b6f63bbcbb",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "9YEiEZsc",
+            "idShort": 335,
+            "name": "Card",
+            "id": "594984223e36c03537bbf456",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-20T20:24:08.007Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594973b351a55f1f8c66dc49",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "gmvG32Mz",
+            "idShort": 168,
+            "name": "(1) Spike: How do we do a penetration test",
+            "id": "58de592670d7ccbeb9075485",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-20T19:12:51.366Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59497340a996f4f7f110f566",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "iQhS4YfO",
+            "idShort": 334,
+            "name": "Card",
+            "id": "594972b0475657fee5259b13",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-20T19:10:56.162Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5949732d89a901d36529cd57",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "gSfpHqLm",
+            "idShort": 333,
+            "name": "Card",
+            "id": "59497299e32d2605a163b3d7",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-20T19:10:37.511Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "594426353fb8c0e859f4c6cf",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "WIP",
+            "id": "58cae0c3d79fec0b737c1af1"
+        },
+        "listBefore": {
+            "name": "Backlog",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "FoKEY73p",
+            "idShort": 321,
+            "name": "(1) Add packaging inventory",
+            "id": "591f39db8ae9a4327fb7fe3f",
+            "idList": "58cae0c3d79fec0b737c1af1"
+        },
+        "old": {
+            "idList": "58de55f7f0f12389211fb768"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-16T18:40:53.545Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "59442481b5273d8b742528c1",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Done",
+            "id": "58cae0c3d79fec0b737c1af5"
+        },
+        "listBefore": {
+            "name": "User Experience",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "p7qUI4pZ",
+            "idShort": 332,
+            "name": "Packaging Service",
+            "id": "59442440ec611ea76d17a6b4",
+            "idList": "58cae0c3d79fec0b737c1af5"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-16T18:33:37.007Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5942e255a76aa3c7db5b8ed0",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog Technical",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "Backlog Features",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "YwfZiqqr",
+            "idShort": 318,
+            "name": "(1) Pub-Sub closed batches",
+            "id": "5908f414689337b13db4c223",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-15T19:39:01.853Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5942e24e55babd5f84b4a8c6",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog Technical",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "Backlog Features",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "7rjJda5q",
+            "idShort": 197,
+            "name": "(1) Send Closed Shop Order Info to ERP",
+            "id": "58f8c7b064fe39091e2e4362",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-15T19:38:54.498Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}, {
+    "id": "5942e216b43d55acd7ee48d0",
+    "idMemberCreator": "58455e54d2af08b28d091009",
+    "data": {
+        "listAfter": {
+            "name": "Backlog Technical",
+            "id": "58de55f7f0f12389211fb768"
+        },
+        "listBefore": {
+            "name": "Backlog Features",
+            "id": "58cae0c3d79fec0b737c1af0"
+        },
+        "board": {
+            "shortLink": "96XIjLyN",
+            "name": "Local Blenders - Workorder",
+            "id": "58cae0c3d79fec0b737c1aef"
+        },
+        "card": {
+            "shortLink": "UxLJGMs3",
+            "idShort": 322,
+            "name": "(1) Delete Packaging Inventory",
+            "id": "591f39fa3e755f60d4d6eaf1",
+            "idList": "58de55f7f0f12389211fb768"
+        },
+        "old": {
+            "idList": "58cae0c3d79fec0b737c1af0"
+        }
+    },
+    "type": "updateCard",
+    "date": "2017-06-15T19:37:58.476Z",
+    "memberCreator": {
+        "id": "58455e54d2af08b28d091009",
+        "avatarHash": "8fc5c71d3757adc616ffb494ea839434",
+        "fullName": "Patrick \"Mac\" McDevitt",
+        "initials": "PM",
+        "username": "patrickmacmcdevitt"
+    }
+}]

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      
+      <div id="labels"></div>
+    </div> 
+  </body>
+ 
+  <script type="text/javascript">
+    var loadedBoards = function(boards) {
+      $.each(boards, function(index, value) {
+        $('#boards')
+          .append($("<option></option>")
+          .attr("value",value.id)
+          .text(value.name)); 
+      });
+    };
+
+    var loadBoards = function() {
+      //Get the users boards
+      Trello.get(
+        '/members/me/boards/',
+        loadedBoards,
+        function() { console.log("Failed to load boards"); }
+      );
+    };
+    
+    var loadedLabels = function(labels) {
+      $.each(labels, function(index, label) {
+        var label = $("<p><span class='badge' style='background:" + label.color + ";'>" + label.uses + "</span> " + label.name + "</p>");
+        $('#labels').append(label)
+      });
+    };
+
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#labels').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/labels',
+        loadedLabels,
+        function() { console.log("Failed to load labels"); }
+      );
+    });
+    
+ /*
+First, let's define what happens when authentication has finished using success and failure callbacks.
+   
+https://trello.com/1/authorize?key=22fbb4e676e9a972cb2f56f30e7530f3&scope=read&name=JQuery_Auth&expiration=never&response_type=token  
+   http://eimagine.com/working-with-the-trello-api/
+*/    
+    var basicToken = '07a5123810603cc3ffb654971fbc126e5e4dd5099484cd75bf0bb1cbc0528ba7';
+    var storedKey = '22fbb4e676e9a972cb2f56f30e7530f3';
+    
+    var colors = {
+        "green":"#61bd4f",
+        "yellow":"#f2d600",
+        "orange":"#ffab4a",
+        "red":"#eb5a46",
+        "purple":"#c377e0",
+        "blue":"#0079bf",
+        "sky":"#00c2e0"
+    };
+    
+    var threatSuccess = function(successMsg) {
+        var output ="";
+        jQuery.each(successMsg, function(index,value){
+            output += "<div class='memberContainer' style=''>";
+            jQuery.each(value.labels, function(subIndex,subValue){
+                output += " <div class='label' style='background-color:"+colors[subValue.color]
+                          +"'>"+subValue.name+"</div>";
+            });
+            output+="<br/>"+value.name+"</div>\r\n";
+        });
+        
+        jQuery('#outputContainer').append(output);
+    };
+    
+    var logError = function(errorMsg) {
+        console.log(errorMsg);
+    };
+   
+    jQuery(document).ready(function(){
+        Trello.setKey(storedKey);
+        Trello.setToken(basicToken);
+        loadBoards;
+    });
+ </script>
+</html>

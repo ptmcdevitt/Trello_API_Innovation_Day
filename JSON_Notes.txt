@@ -1,0 +1,9 @@
+JSON with AJAX appliocation with JQuery and AngularJS
+
+ JSON plays in asynchronous JavaScript and XML (AJAX) applications that provide better 
+responsiveness than older web pages by dynamically loading bits of a web page on demand
+
+Both AngularJS and jQuery are client-side JavaScript frameworks that make developing web applications easier. jQuery was one of the first and is probably the most widely adopted framework; AngularJS is newer and has the additional advantage of providing you with  the ability to structure your code using the model-view-controller (MVC) paradigm
+
+MVC is a design pattern that dates back decades, originally introduced as a part of Smalltalk in the 1970s. This pattern divides your code into three distinct segments: the model, which contains the data your user wants to manipulate, the view, which shows the contents of the model, and the controller, which accepts events and changes the model in response to the accepted events.
+

@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ <!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Trello API test</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+  
+  
+</head>
+
+<body>
+  
+<div class="container">
+  <h1>Trello API test</h1>
+  <p>This is my demo for <strong>inserting a new `task name` and `description` to specific lists.</strong></p>
+  <ol>
+    <!-- Introduction-->
+    <li> <a class="btn btn-default btn-sm" target="_blank" href="https://trello.com/">Login Trello. </a></li>
+    <!-- Urge a API token.-->
+    <li> <a class="btn btn-default btn-sm" target="_blank" href="https://trello.com/1/authorize?key=22fbb4e676e9a972cb2f56f30e7530f3&amp;name=&amp;expiration=1day&amp;response_type=token&amp;scope=read,write">Get a temporary API Token and copy to your clipboard.</a></li>
+    <!-- Authorize Step -->
+    <li class="form-group form-inline">
+      <label>Input(Paste) Token:&nbsp; </label>
+      <input class="form-control" id="token" size="50" placeholder="ex. 1234567890abcdeffedcba0876543210..."/><br/>
+      <button class="btn btn-primary" id="auth">Authorize </button>&nbsp
+      <label>Result:&nbsp; </label><code id="auth-result">Not yet</code>
+    </li>
+    <!-- Selecting Board in your Trello account-->
+    <li class="form-group form-inline">
+      <label>Select board from &nbsp; </label>
+      <select class="form-control" id="boards" disabled="disabled">
+        <option value="">Nothing</option>
+      </select>
+    </li>
+    <!-- Selecting List in a board-->
+    <li class="form-group form-inline">
+      <label>Select list from &nbsp; </label>
+      <select class="form-control" id="lists" disabled="disabled">
+        <option value="">Nothing</option>
+      </select>
+    </li>
+    <!-- Urge input task name , descriptions for inserting to list -->
+    <li class="form-group form-inline">
+      <label>Input a name of task : &nbsp;</label><br/>
+      <input class="form-control" id="task-name" size="50" placeholder="ex. New Task!!" value="New Task!!"/><br/>
+      <label>Input descriptons of task : &nbsp;</label><br/>
+      <textarea class="form-control" id="task-description" rows="4" placeholder="# What is this task... * Foo bar * Piyo Hoge"># What is this task...
+
+* Foo bar
+* Piyo Hoge</textarea>
+    </li>
+    <!-- Invoke Button!!-->
+    <li class="form-group form-inline">
+      <button class="btn btn-primary" id="import" disabled="disabled">Add one card</button>
+      <label>Result:&nbsp; </label><code id="import-result">Not yet</code>
+    </li>
+  </ol>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3'></script>
+
+<script src="js/index.js"></script>
+<script>
+// http://www.codeseek.co/tobynet/trello-api-test-ZbmEbb
+'use strict';
+
+// On Click Authorize Button
+var startAuthAndNext = function startAuthAndNext() {
+  console.log('Starting Auth...');
+
+  // Altenertive auth()
+  pseudoAuth($('#token').val())
+
+  // Get your boards and set those to combobox!!
+  .then(getBoards).then(setComboboxTo('#boards')).then(showLog_('Boards loaded'))
+
+  // Success
+  .then(function () {
+    var result = Trello.token();
+    $('#auth-result').text("May be OK: " + result);
+    console.log("token: " + result);
+  })
+
+  // Failed!!!!
+  .catch(function (msg) {
+    $('#auth-result').text("Error " + msg + JSON.stringify(msg));
+    showError(msg);
+  });
+
+  console.log('finishing auth');
+};
+
+// On Board Selected
+var onBoardsSelected = function onBoardsSelected() {
+  console.log('Board Selected');
+  console.log('Selected Board Id: ' + selectedBoardId());
+
+  getLists(selectedBoardId()).then(setComboboxTo('#lists')).then(showLog_('Lists loaded'))
+  // Failed!!!!
+  .catch(showError);
+};
+
+// On List Selected
+var onListsSelected = function onListsSelected() {
+  console.log('List Selected');
+  console.log('Selected List Id: ' + selectedListId());
+
+  $('#import').prop('disabled', false);
+};
+
+// On Click Add card Button
+var startImporting = function startImporting() {
+  console.log('Start importing with new card...');
+
+  // Make New Card with data in the form !!!!
+  makeCard(selectedListId(), $("#task-name").val(), $("#task-description").val())
+  // Success
+  .then(function (msg) {
+    $('#import-result').text("OK: created id is " + msg.id);
+    console.log("Make Card Succes: " + JSON.stringify(msg));
+  })
+  // Failed!!!!
+  .catch(function (msg) {
+    $('#import-result').text("Error: " + msg + JSON.stringify(msg));
+    showError(msg);
+  });
+
+  console.log('Finished to import!');
+};
+
+$(document).ready(function () {
+  console.log('Setting events...');
+  // Intended for no need to invoke on load
+  $('#auth').on('click', startAuthAndNext);
+
+  // On select comboxes
+  $('#boards').on('change', onBoardsSelected);
+  $('#lists').on('change', onListsSelected);
+
+  // Add card Button!!
+  $('#import').on('click', startImporting);
+
+  console.log('Finished to set events');
+});
+
+// -------------------------------------------------
+// Invoke Trello APIs
+//   http://www.codeseek.co/tobynet/trello-api-test-ZbmEbb
+// Stacked for as following errors ...
+//
+// Unsafe JavaScript attempt to initiate navigation for frame with URL 'https://trello.com/1/token/approve' from frame with URL 'http://s.codepen.io/tobynet/fullpage/ZbmEbb?'. The frame attempting navigation is sandboxed, and is therefore disallowed from navigating its ancestors.
+/*let auth = function() {
+  return new Promise((resolve, reject) => {
+    console.log("Starting auth...");
+        
+    Trello.authorize({
+      type: "popup",
+      name: "Sample API Application",
+      scope: { read: true, write: true },
+      expiration: "1day",
+      resolve,
+      reject
+    });
+  })
+};
+*/
+
+// Authorize without Trello object
+var pseudoAuth = function pseudoAuth(token) {
+  Trello.setToken(token);
+  return Promise.resolve();
+};
+
+var getBoards = function getBoards() {
+  return new Promise(function (resolve, reject) {
+    Trello.get('/member/me/boards', resolve, reject);
+  });
+};
+
+var getLists = function getLists(boardId) {
+  return new Promise(function (resolve, reject) {
+    Trello.get('/boards/' + boardId + '/lists', resolve, reject);
+  });
+};
+
+// String
+var selectedBoardId = function selectedBoardId() {
+  return $('#boards option:selected').val();
+};
+
+// String
+var selectedListId = function selectedListId() {
+  return $('#lists option:selected').val();
+};
+
+// Create a new card to the destination List
+var makeCard = function makeCard(destinationListId, name, description) {
+  // ref. https://developers.trello.com/advanced-reference/card#post-1-cards
+  // todo: merge specific options in arguments
+  var options = {
+    name: name,
+    desc: description,
+    pos: "bottom",
+    due: null,
+    idList: destinationListId
+  };
+  return new Promise(function (resolve, reject) {
+    Trello.post('/cards/', options, resolve, reject);
+  });
+};
+
+// -------------------------------------------------
+// Etc
+
+// ex.
+//  let items = [
+//      {name: "foobar", id: 1234, ... },
+//      {name: "barrun", id: 4567, ... }];
+//  setCombobox('#foobar', items);
+//
+var setCombobox = function setCombobox(selector, rawItems) {
+  var items = asValueAndNames(rawItems);
+  var $selectElement = $($.find(selector));
+
+  //console.log(selector + ": rawItems " + JSON.stringify(rawItems));
+  console.log(selector + ": items " + JSON.stringify(items));
+
+  $selectElement.empty().prop('disabled', false);
+
+  // Add default selection(empty)
+  $selectElement.append($("<option/>").text('- select -'));
+
+  // Add items.{value,name} to selectElement
+  items.forEach(function (x) {
+    $selectElement.append($("<option/>").val(x.value).text(x.name));
+  });
+};
+
+// Curried setCombobox
+// String -> [{id: *, name: *, ...}] -> ()
+var setComboboxTo = function setComboboxTo(selector) {
+  return function (items) {
+    return setCombobox(selector, items);
+  };
+};
+
+// For combobox items
+// Ex.
+//  Input:   [{id: 'foo', name: 'bar', buzz: 'piyo'}, ...]
+//  Output:  [{value: 'foo', name: 'bar'}, ...]
+var asValueAndNames = function asValueAndNames(items) {
+  return items.map(function (x) {
+    return { value: x.id, name: x.name };
+  });
+};
+
+// A shorthand code for showing errors
+var showError = function showError(msg) {
+  console.log("Error: " + msg);
+  console.log(JSON.stringify(msg));
+};
+
+var showLog_ = function showLog_(msg) {
+  return function () {
+    return console.log(msg);
+  };
+};
+</script>
+</html>

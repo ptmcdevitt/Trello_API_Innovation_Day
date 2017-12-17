@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://trello.com/1/client.js?key=e5931afdfaa939722b379acd49eb5a61"></script>
+        <style>
+            .memberContainer{
+                text-align:center;
+                display:inline-block;
+                font-size:large;
+                border-radius: 5px;
+                border:black solid 1px;
+                min-width:250px;
+                min-height:25px;
+                padding:5px;
+                margin:5px;
+            }
+            
+            .label{
+                display:inline-block;
+                border-radius: 5px;
+                min-width:50px;
+                padding-right:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <hr/>
+        <div id="outputContainer"></div>
+        <script>
+            $.noConflict();
+        </script>
+    </body>
+<Script>	
+var basicToken = 'ad28f08f7415f13cf26d71c46ccf02945ceec22dc399f7de744cc1e1d3445565';
+var storedKey = 'e5931afdfaa939722b379acd49eb5a61';
+    
+    var colors = {
+        "green":"#61bd4f",
+        "yellow":"#f2d600",
+        "orange":"#ffab4a",
+        "red":"#eb5a46",
+        "purple":"#c377e0",
+        "blue":"#0079bf",
+        "sky":"#00c2e0"
+    };
+    
+    var threatSuccess = function(successMsg) {
+        var output ="";
+        jQuery.each(successMsg, function(index,value){
+            output += "<div class='memberContainer' style=''><br/>"+value.name+"</div>\r\n";
+          });
+        
+        jQuery('#outputContainer').append(output);
+    };
+    
+    var logError = function(errorMsg) {
+        console.log(errorMsg);
+    };
+   
+    jQuery(document).ready(function(){
+        Trello.setKey(storedKey);
+        Trello.setToken(basicToken);
+        Trello.get('/members/my/boards', threatSuccess, logError);
+    });
+// GET /1/boards/[board_id]/lists    
+</script>	
+</html>

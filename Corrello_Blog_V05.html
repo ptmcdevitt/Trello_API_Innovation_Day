@@ -1,0 +1,88 @@
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="favico.ico" href=""> 
+</head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      
+      <div id="labels"></div>
+    </div> 
+  </body>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=e5931afdfaa939722b379acd49eb5a61"></script>
+  
+  <script type="text/javascript">
+    var loadedBoards = function(boards) {
+      $.each(boards, function(index, value) {
+        $('#boards')
+          .append($("<option></option>")
+          .attr("value",value.id)
+          .text(value.name)); 
+      });
+    };
+
+    var loadBoards = function() {
+      //Get the users boards
+      Trello.get(
+        '/members/me/boards/',
+        loadedBoards,
+        function() { console.log("Failed to load boards"); }
+      );
+    };
+    
+   var loadedLabels = function(labels) {
+      $.each(labels, function(index, label) {
+	  var FS_Count = 0
+	  var CS_count = 0
+	  if (label.name == "Feature Story") {
+		FS_count = label.uses };
+	 
+	  if (label.name == "Completed Story") {
+	     CS_count = label.uses };
+	  
+        var label = $("<p><span class='badge' style='background:" + label.color + ";'>" + label.uses + "</span> " + label.name + "</p>");
+        $('#labels').append(label)
+      });
+	  var Pct_Complete = 0
+	  Pct_Complete = (CS_count / FS_count);
+	  alert( "Percent Complete..." + Pct_Complete )
+    };
+	
+	
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#labels').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/labels',
+        loadedLabels,
+        function() { console.log("Failed to load labels"); }
+      );
+    });
+    
+    Trello.authorize({
+      type: "popup",
+      name: "Trello dashboard",
+      scope: {
+        read: true,
+        write: false },
+      expiration: "never",
+      success: loadBoards,
+      error: function() { console.log("Failed authentication"); }
+    });
+ </script>
+</html>

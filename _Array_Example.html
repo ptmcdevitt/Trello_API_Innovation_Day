@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Array Printing</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope) {
+            $scope.IsVisible = false;
+            $scope.GenerateTable = function () {
+                $scope.Customers = [
+                {
+                    CustomerId: 1, Name: "John Hammond", Country: "United States",
+                    Orders: [
+                        { OrderId: 10248, Freight: 32.38, ShipCountry: 'France' },
+                        { OrderId: 10249, Freight: 12.43, ShipCountry: 'Japan' },
+                        { OrderId: 10250, Freight: 66.35, ShipCountry: 'Russia' }
+                   ]
+                },
+                {
+                    CustomerId: 2, Name: "Mudassar Khan", Country: "India",
+                    Orders: [
+                        { OrderId: 10266, Freight: 77.0, ShipCountry: 'Argentina' },
+                        { OrderId: 10267, Freight: 101.12, ShipCountry: 'Australia' },
+                        { OrderId: 10268, Freight: 11.61, ShipCountry: 'Germany' }
+                    ]
+                },
+                {
+                    CustomerId: 3, Name: "Suzanne Mathews", Country: "France",
+                    Orders: [{ OrderId: 10250, Freight: 65.83, ShipCountry: 'Brazil'} ]
+                },
+                {
+                    CustomerId: 4, Name: "Robert Schidner", Country: "Russia",
+                    Orders: [
+                        { OrderId: 10233, Freight: 89.11, ShipCountry: 'Belgium' },
+                        { OrderId: 10234, Freight: 51.30, ShipCountry: 'Canada' },
+                        { OrderId: 10235, Freight: 46.11, ShipCountry: 'Austria' }
+                    ]
+                }
+               ];
+                $scope.IsVisible = true;
+            };
+        });
+        
+    <!---https://www.aspsnippets.com/Articles/AngularJS-ng-repeat-Nested-Table-Populate-Bind-dynamic-Nested-HTML-Table-from-JSON-in-AngularJS.aspx -->     
+    </script>
+    <div ng-app="MyApp" ng-controller="MyController">
+        <input type="button" value="Generate Table" ng-click="GenerateTable()" />
+        <hr />
+        <table cellpadding="0" cellspacing="0" ng-show="IsVisible">
+            <tr>
+                <th>Customer Id</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Orders</th>
+            </tr>
+            <tbody ng-repeat="c in Customers">
+                <tr>
+                    <td>{{c.CustomerId}}</td>
+                    <td>{{c.Name}}</td>
+                    <td>{{c.Country}}</td>
+                    <td>
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th>Order Id</th>
+                                <th>Freight</th>
+                                <th>ShipCountry</th>
+                            </tr>
+                            <tbody ng-repeat="o in c.Orders">
+                            <tr>
+                                <td>{{o.OrderId}}</td>
+                                <td>{{o.Freight}}</td>
+                                <td>{{o.ShipCountry}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+ 

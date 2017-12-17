@@ -1,0 +1,410 @@
+Actions
+Action Object
+Actions Nested Resource
+Action Types
+get/actions/{id}
+get/actions/{id}/{field}
+get/actions/{id}/board
+get/actions/{id}/card
+get/actions/{id}/display
+get/actions/{id}/list
+get/actions/{id}/member
+get/actions/{id}/memberCreator
+get/actions/{id}/organization
+put/actions/{id}
+put/actions/{id}/text
+delete/actions/{id}
+Batch
+get/batch
+Boards
+Board Object
+Boards Nested Resource
+get/boards/{id}
+get/boards/{id}/{field}
+get/boards{id}/actions
+get/boards/{id}/boardPlugins
+get/boards/{id}/boardStars
+get/boards/{id}/cards
+get/boards/{id}/cards/{filter}
+get/boards/{id}/cards/{cardId}
+get/boards/{id}/checklists
+get/boards/{id}/tags
+get/boards/{id}/labels
+get/boards/{id}/lists
+get/boards/{id}/lists/{filter}
+get/boards/{id}/members
+get/boards/{id}/plugins
+put/boards/{id}
+put/boards/{id}/members
+put/boards/{id}/members/{idMember}
+put/boards/{id}/memberships/{idMembership}
+put/boards/{id}/myPrefs/emailPosition
+put/boards/{id}/myPrefs/idEmailList
+put/boards/{id}/myPrefs/showListGuide
+put/boards/{id}/myPrefs/showSidebar
+put/boards/{id}/myPrefs/showSidebarActivity
+put/boards/{id}/myPrefs/showSidebarBoardActions
+put/boards/{id}/myPrefs/showSidebarMembers
+post/boards/
+post/boards/{id}/boardPlugins
+post/boards/{id}/calendarKey/generate
+post/boards/{id}/checklists
+post/boards/{id}/emailKey/generate
+post/boards/{id}/idTags
+post/boards/{id}/labels
+post/boards/{id}/lists
+post/boards/{id}/markedAsViewed
+post/boards/{id}/powerUps
+delete/boards/{id}/boardPlugins/{idPlugin}
+delete/boards/{id}/members/{idMember}
+delete/boards/{id}/powerUps/{powerUp}
+Cards
+Card Object
+Cards Nested Resource
+Attachments
+Stickers
+get/cards/{id}
+get/cards/{id}/{field}
+get/cards/{id}/actions
+get/cards/{id}/attachments
+get/cards/{id}/attachments/{idAttachment}
+get/cards/{id}/board
+get/cards/{id}/checkItemStates
+get/cards/{id}/checklists
+get/cards/{id}/checkItem/{idCheckItem}
+get/cards/{id}/list
+get/cards/{id}/members
+get/cards/{id}/membersVoted
+get/cards/{id}/pluginData
+get/cards/{id}/stickers
+get/cards/{id}/stickers/{idSticker}
+put/cards/{id}
+put/cards/{id}/actions/{idAction}/comments
+put/cards/{id}/checkItem/{idCheckItem}
+put/cards/{id}/stickers/{idSticker}
+post/cards
+post/cards/{id}/actions/comments
+post/cards/{id}/attachments
+post/cards/{id}/checklists
+post/cards/{id}/idLabels
+post/cards/{id}/idMembers
+post/cards/{id}/labels
+post/cards/{id}/markAssociatedNotificationsRead
+post/cards/{id}/membersVoted
+delete/cards/{id}
+delete/cards/{id}/actions/{idAction}/comments
+delete/cards/{id}/attachments/{idAttachment}
+delete/cards/{id}/checkItem/{idCheckItem}
+delete/cards/{id}/checklists/{idChecklist}
+delete/cards/{id}/idLabels/{idLabel}
+delete/cards/{id}/idMembers/{idMember}
+delete/cards/{id}/membersVoted/{idMember}
+delete/cards/{id}/stickers/{idSticker}
+Checklists
+Checklist Object
+Checklists Nested Resource
+get/checklists/{id}
+get/checklists/{id}/{field}
+get/checklists/{id}/board
+get/checklists/{id}/cards
+get/checklists/{id}/checkItems
+get/checklists/{id}/checkItems/{checkItemId}
+put/checklists/{id}
+put/checklists/{id}/name
+put/checklists/{id}/pos
+post/checklists
+post/checklists/{id}/checkItems
+delete/checklists/{id}
+delete/checklists/{id}/checkItems/{idCheckItem}
+Enterprises
+Enterprise Object
+get/enterprises/{id}
+get/enterprises/{id}/admins
+get/enterprises/{id}/signupUrl
+get/enterprises/{id}/members
+get/enterprises/{id}/members/{idMember}
+get/enterprises/{id}/transferrable/organization/{idOrganization}
+put/enterprises/{id}/members/{idMember}/deactivated
+put/enterprises/{id}/organizations
+put/enterprises/{id}/admins/{idMember}
+post/enterprises/{id}/tokens
+delete/enterprises/{id}/organizations/{idOrganization}
+delete/enterprises/{id}/admins/{idMember}
+Labels
+Label Object
+Labels Nested Resource
+get/labels/{id}
+put/labels/{id}
+put/labels/{id}/color
+put/labels/{id}/name
+post/labels
+delete/labels/{id}
+Lists
+List Object
+Lists Nested Resource
+get/lists/{id}
+get/lists/{id}/{field}
+get/lists/{id}/actions
+get/lists/{id}/board
+get/lists/{id}/cards
+put/lists/{id}
+put/lists/{id}/closed
+put/lists/{id}/idBoard
+put/lists/{id}/name
+put/lists/{id}/pos
+put/lists/{id}/subscribed
+post/lists
+post/lists/{id}/archiveAllCards
+post/lists/{id}/moveAllCards
+Members
+Member Object
+Members Nested Resource
+get/members/{id}
+get/members/{id}/{field}
+get/members/{id}/actions
+get/members/{id}/boards
+get/members/{id}/boardBackgrounds
+get/members/{id}/boardBackgrounds/{idBackground}
+get/members/{id}/boardStars
+get/members/{id}/boardStars/{idStar}
+get/members/{id}/boardsInvited
+get/members/{id}/cards
+get/members/{id}/customBoardBackgrounds
+get/members/{id}/customBoardBackgrounds/{idBackground}
+get/members/{id}/customEmoji
+get/members/{id}/customEmoji/{idEmoji}
+get/members/{id}/customStickers
+get/members/{id}/customStickers/{idSticker}
+get/members/{id}/enterprises/
+get/members/{id}/notifications
+get/members/{id}/organizations
+get/members/{id}/organizationsInvited
+get/members/{id}/savedSearches
+get/members/{id}/savedSearches/{idSearch}
+get/members/{id}/tokens
+put/members/{id}
+put/members/{id}/boardBackgrounds/{idBackground}
+put/members/{id}/boardStars/{idStar}
+put/members/{id}/customBoardBackgrounds/{idBackground}
+put/members/{id}/savedSearches/{idSearch}
+post/members/{id}/avatar
+post/members/{id}/boardBackgrounds
+post/members/{id}/boardStars
+post/members/{id}/customBoardBackgrounds
+post/members/{id}/customEmoji
+post/members/{id}/customStickers
+post/members/{id}/oneTimeMessagesDismissed
+post/members/{id}/savedSearches
+delete/members/{id}/boardBackgrounds/{idBackground}
+delete/members/{id}/boardStars/{idStar}
+delete/members/{id}/customBoardBackgrounds/{idBackground}
+delete/members/{id}/customStickers/{idSticker}
+delete/members/{id}/savedSearches/{idSearch}
+Notifications
+Notification Object
+Notifications Nested Resource
+get/notifications/{id}
+get/notifications/{id}/{field}
+get/notifications/{id}/board
+get/notifications/{id}/card
+get/notifications/{id}/list
+get/notifications/{id}/member
+get/notifications/{id}/memberCreator
+get/notifications/{id}/organization
+put/notifications/{id}
+put/notifications/{id}/unread
+post/notifications/all/read
+Organizations
+Organization Object
+Organizations Nested Resource
+get/organizations/{id}
+get/organizations/{id}/{field}
+get/organizations/{id}/actions
+get/organizations/{id}/boards
+get/organizations/{id}/members
+get/organizations/{id}/members/{filter}
+get/organizations/{id}/membersInvited
+get/organizations/{id}/memberships
+get/organizations/{id}/memberships/{idMembership}
+get/organizations/{id}/pluginData
+get/organizations/{id}/tags
+put/organizations/{id}
+put/organizations/{id}/members
+put/organizations/{id}/members/{idMember}
+put/organizations/{id}/members/{idMember}/deactivated
+post/organizations
+post/organizations/{id}/logo
+post/organizations/{id}/tags
+delete/organizations/{id}
+delete/organizations/{id}/logo
+delete/organizations/{id}/members/{idMember}
+delete/organizations/{id}/members/{idMember}/all
+delete/organizations/{id}/prefs/associatedDomain
+delete/organizations/{id}/prefs/orgInviteRestrict
+Search
+get/search
+get/search/members
+Tokens
+Token Object
+get/tokens/{token}
+get/tokens/{token}/member
+get/tokens/{token}/webhooks
+get/tokens/{token}/webhooks/{idWebhook}
+put/tokens/{token}/webhooks
+delete/tokens/{token}
+delete/tokens/{token}/webhooks/{idWebhook}
+Types
+Webhooks
+Webhook Object
+get/webhooks/{id}
+get/webhooks/{id}/{field}
+put/webhooks/{id}
+post/webhooks
+delete/webhooks/{id}
+SCIM 2.0
+
+Overview
+SCIM Version
+Authorization
+Example Uses
+Resources
+Routes
+Notes
+Power-Ups
+
+Introduction
+Capabilities
+attachment-sections
+attachment-thumbnail
+board-buttons
+card-buttons
+card-badges
+card-detail-badges
+card-from-url
+format-url
+authorization-status
+show-authorization
+show-settings
+callback
+Client Library
+Get & Set Custom Data
+t.getAll()
+t.get(scope, visibility, key, default)
+t.set(scope, visibility, key, value)
+t.remove(scope, visibility, key)
+t.arg(name, defaultValue)
+t.storeSecret(key, data)
+t.loadSecret(key)
+Get data on Trello objects
+t.getContext()
+t.isMemberSignedIn()
+t.board('id', 'name', ...)
+t.list('id', 'name', ...)
+t.lists('id', 'name', ...)
+t.card('id', 'name', ...)
+t.cards('id', 'name', ...)
+t.member('id', 'fullName', ...)
+t.memberCanWriteToModel(modelType)
+t.organization('id, 'name')
+UI Functions
+t.popup(opts)
+t.closePopup()
+t.back()
+t.boardBar(opts)
+t.closeBoardBar()
+t.overlay(opts)
+t.closeOverlay()
+t.render(func)
+t.sizeTo(selector)
+t.authorize(url, opts)
+t.showCard(idCard)
+t.navigate(opts)
+t.attach(data)
+Localization
+t.localizeKey(key, data)
+t.localizeKeys(keys)
+t.localizeNode(el)
+t.notifyParent('done')
+Topics
+CORS Settings
+Authentication
+Recoloring
+Timeouts
+Power-Ups In Browser Backgrounds
+Webhooks & Offline Access
+Troubleshooting
+Guidelines
+Style
+Recent Posts
+
+Action types:
+addAdminToBoard
+addAdminToOrganization
+addAttachmentToCard
+addAdminToBoard
+addAdminToOrganization
+addAttachmentToCard
+addBoardsPinnedToMember
+addChecklistToCard
+addLabelToCard
+addMemberToBoard
+addMemberToCard
+addMemberToOrganization
+addToOrganizationBoard
+commentCard
+convertToCardFromCheckItem
+copyBoard
+copyCard
+copyChecklist
+createLabel
+copyCommentCard
+createBoard
+createBoardInvitation
+createBoardPreference
+createCard
+createChecklist
+createList
+createOrganization
+createOrganizationInvitation
+deleteAttachmentFromCard
+deleteBoardInvitation
+deleteCard
+deleteCheckItem
+deleteLabel
+deleteOrganizationInvitation
+disablePlugin
+disablePowerUp
+emailCard
+enablePlugin
+enablePowerUp
+makeAdminOfBoard
+makeAdminOfOrganization
+makeNormalMemberOfBoard
+makeNormalMemberOfOrganization
+makeObserverOfBoard
+memberJoinedTrello
+moveCardFromBoard
+moveCardToBoard
+moveListFromBoard
+moveListToBoard
+removeAdminFromBoard
+removeAdminFromOrganization
+removeBoardsPinnedFromMember
+removeChecklistFromCard
+removeFromOrganizationBoard
+removeLabelFromCard
+removeMemberFromBoard
+removeMemberFromCard
+removeMemberFromOrganization
+unconfirmedBoardInvitation
+unconfirmedOrganizationInvitation
+updateBoard
+updateCard
+updateCheckItem
+updateCheckItemStateOnCard
+updateChecklist
+updateLabel
+updateList
+updateMember
+updateOrganization
+voteOnCard

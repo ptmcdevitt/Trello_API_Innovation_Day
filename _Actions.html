@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>A Trello Dashboard</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      <div id="labels"></div>
+    </div> 
+   <div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-24 content list"></div>
+  <div class="col-*-*"></div>
+</div> 
+     <div id='cards'></div>  
+  </body>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+  <script type="text/javascript">
+    var loadedBoards = function(boards) {
+      $.each(boards, function(index, value) {
+        $('#boards')
+          .append($("<option></option>")
+          .attr("value",value.id)
+          .text(value.name)); 
+      });
+    };
+    var loadBoards = function() {
+      //Get the users boards
+      Trello.get(
+        '/members/me/boards/',
+        loadedBoards,
+        function() { console.log("Failed to load boards"); }
+      );
+    };
+    
+    var loadedActions = function(actions) {
+      $.each(actions, function(index, action) {
+ //       var action = $("<p><span class='badge' style='color:red>" + action.type + "</span> " + action.id + "</p>");
+         var action = $("<div class='col-md-8' ><div class='col-md-24 box content list'>" + action.type + "<div id='cards" + action.id + "'></div></div>");
+        $('#actions').append(action)
+      });
+    };
+    $('#boards').change(function() {
+      var boardId = $("option:selected", this).val();
+      $('#actions').empty();
+      
+      Trello.get(
+        '/boards/' + boardId + '/actions',
+        loadedActions,
+        function() { console.log("Failed to load Actions"); }
+      );
+    });
+    
+    Trello.authorize({
+                  type: "popup",
+                  name: "Trello dashboard",
+                  scope: {
+                    read: true,
+                    write: false },
+                  expiration: "never",
+                  success: loadBoards,
+                  error: function() { console.log("Failed authentication"); }
+                });
+  </script>
+</html>

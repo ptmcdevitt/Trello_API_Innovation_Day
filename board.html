@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui.min.css">
+    <link rel="stylesheet" href="kanban-flow.css">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-42132556-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script src="libs/jquery-2.2.3.min.js"></script>
+    <script src="libs/jquery-ui.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-slider.min.js"></script>
+    <script src="libs/jquery.canvasjs-1.9.9.min.js"></script>
+    <script src="libs/iframeResizer.contentWindow.min.js"></script>
+    <script src="kanban-flow.js"></script>
+</head>
+<body>
+<div class="kanban-board" style="display:inline-block">
+    <div class="modal fade simulation-settings-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active"><a>Backlog</a></li>
+                        <li role="presentation"><a>Value</a></li>
+                        <li role="presentation"><a>Rules</a></li>
+                        <li role="presentation"><a>Team</a></li>
+                        <li role="presentation"><a>Board</a></li>
+                        <li role="presentation"><a>Stats</a></li>
+                    </ul>
+                    <div>
+                        <table class="settings-table">
+                            <tr>
+                                <td>Prioritisation method</td>
+                                <td><select data-model="columns.prioritisationStrategy">
+                                    <option value="fifo">FIFO</option>
+                                    <option value="value">Value</option>
+                                    <option value="cd3">CD3</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                        <div class="backlog-settings">
+                            <div class="backlog-settings-temporal">
+                                <table class="settings-table">
+                                    <tr>
+                                        <td>Task creation strategy</td>
+                                        <td><select data-model="tasks.arrivalStrategy.current">
+                                            <option value="up-to-limit">If Limit Allows</option>
+                                            <option value="constant-push">Constant Push</option>
+                                            <option value="random-push">Random Push</option>
+                                            <option value="scrum">Scrum</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr data-for-option="constant-push">
+                                        <td>Constant demand level:</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.arrivalStrategy.configs.constant-push.demand"/>
+                                            items/day
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="random-push">
+                                        <td>Variable demand level (around):</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.arrivalStrategy.configs.random-push.demand"/>
+                                            items/day
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="random-push">
+                                        <td>Expected batch size (around):</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.arrivalStrategy.configs.random-push.batch-size"/>
+                                            items
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="scrum">
+                                        <td>Iteration length:</td>
+                                        <td><input type="text" data-model="tasks.arrivalStrategy.configs.scrum.length"/>
+                                            days
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="scrum">
+                                        <td>Tasks per iteration:</td>
+                                        <td><input type="text" data-model="tasks.arrivalStrategy.configs.scrum.tasks"/>
+                                            tasks
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="scrum">
+                                        <td>Substract existing WIP from new tasks number?</td>
+                                        <td><input type="checkbox"
+                                                   data-model="tasks.arrivalStrategy.configs.scrum.include-existing"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="backlog-settings-task-size">
+                                <table class="settings-table task-size-strategies">
+                                    <tr>
+                                        <td>Task size strategy</td>
+                                        <td colspan="2"><select data-model="tasks.sizeStrategy.current">
+                                            <option value="constant">Constant</option>
+                                            <option value="normal">Normal Distribution</option>
+                                            <option value="tshirt">S/M/L/XL</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr data-for-option="tshirt">
+                                        <td></td>
+                                        <td>Effort(h)</td>
+                                        <td>Probability(%)</td>
+                                    </tr>
+                                    <tr data-for-option="tshirt">
+                                        <td>Small:</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.small-effort"/></td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.small-probability"/>
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="tshirt">
+                                        <td>Medium:</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.medium-effort"/></td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.medium-probability"/>
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="tshirt">
+                                        <td>Large:</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.large-effort"/></td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.large-probability"/>
+                                        </td>
+                                    </tr>
+                                    <tr data-for-option="tshirt">
+                                        <td>XLarge:</td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.xlarge-effort"/></td>
+                                        <td><input type="text"
+                                                   data-model="tasks.sizeStrategy.configs.tshirt.xlarge-probability"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="value-settings">
+                            <div>
+                                <table class="settings-table">
+                                    <tr>
+                                        <td>Value per day (mean):</td>
+                                        <td><input type="text" data-model="value.mean"/>$/day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Value per day (variation):</td>
+                                        <td><input type="text" data-model="value.variation"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capitalisation start after (from task creation):</td>
+                                        <td><input type="text" data-model="value.start"/>days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capitalisation duration:</td>
+                                        <td><input type="text" data-model="value.duration"/>days</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <img src="value-diagram.svg" />
+                            </div></div>
+                    </div>
+                    <div>
+                        <table class="settings-table">
+                            <tr>
+                                <td>Max WIP for a single person</td>
+                                <td><input type="text" maxlength="2" data-model="maxTasksOnOnePerson"/></td>
+                            </tr>
+                            <tr>
+                                <td>Max no. of people working on a single task</td>
+                                <td><input type="text" maxlength="2" data-model="maxPeopleOnOneTask"/></td>
+                            </tr>
+                            <tr>
+                                <td>Warmup time before working on a task (around)</td>
+                                <td><input type="text" maxlength="2" data-model="warmupTime"/> hours</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="simulation-settings-team-tab">
+                        <div class="simulation-settings-team">
+                            <div>
+                                <h4>Team members headcount and productivity</h4>
+                                <table class="settings-table who-works-where">
+                                </table>
+                                <div class="team-config-buttons">
+                                    <button type="button" class="btn team-member-add">Add a new row</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-config-div">
+                        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Changes in
+                            board layout will reset your simulation! Also, you will need to save the changes by pressing
+                            the Save button at the bottom.</p>
+                        <table class="board-config">
+                            <tbody>
+                            <tr>
+                                <th/>
+                                <th>Group name</th>
+                                <th>Column name</th>
+                                <th>Full name</th>
+                                <th>Queue?</th>
+                                <th></th>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="board-config-buttons">
+                            <button type="button" class="btn board-config-add-column">Add new column</button>
+                            <button type="button" class="btn btn-danger board-config-save">Save and reload</button>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="settings-table">
+                            <tr>
+                                <td>No. of days to calculate moving averages</td>
+                                <td><input type="text" maxlength="3" data-model="stats.noOfDaysForMovingAverage"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board-overlay">
+        <div class="top-toolbar">
+            <div class="time-and-buttons">
+                Day: <span class="day"></span>, time: <span class="hour"></span>
+                <div class=buttons>
+                    <button type="button" class="btn btn-success play"><span class="glyphicon glyphicon-play"
+                                                                             aria-hidden="true"></span></button>
+                    <button type="button" class="btn btn-info pause"><span class="glyphicon glyphicon-pause"
+                                                                           aria-hidden="true"></span></button>
+                    <button type="button" class="btn btn-danger stop"><span class="glyphicon glyphicon-stop"
+                                                                            aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class="timescale-wrapper">
+                <div>Simulation speed:</div>
+                <input class="timescale" data-slider-id='timescaleSlider' type="text"/>
+            </div>
+            <div class="title">
+                <p>Kanban Flow</p>
+                <p>Simulator</p>
+            </div>
+            <div class="actions">
+                <button type="button" class="btn simulation-help"><span class="glyphicon glyphicon-question-sign"
+                                                                        aria-hidden="true"></span></button>
+                <br/>
+                <button type="button" class="btn simulation-settings" data-toggle="modal"
+                        data-target=".simulation-settings-modal"><span class="glyphicon glyphicon-wrench"
+                                                                       aria-hidden="true"></span></button>
+            </div>
+        </div>
+        <div class="board-wrapper board-wrapper-max-height">
+            <table class="board">
+                <tr></tr>
+                <tr></tr>
+                <tr class="tasks"></tr>
+            </table>
+            <div class="task-details">
+                <p>Task <span data-task-detail="name"></span></p>
+                <div class="task-details-work">
+                </div>
+                <div class="task-details-people">
+                </div>
+                <p>Since: <span data-task-detail="since"></span></p>
+            </div>
+        </div>
+        <div class="general-stats">
+            <strong>Avg. WIP:</strong> <span class="stats-wip"></span> |
+            <strong>Avg. Lead Time:</strong> <span class="stats-lead-time"></span>d |
+            <strong>Avg. Throughput:</strong> <span class="stats-throughput"></span>/d |
+            <strong>WIP/Lead Time:</strong> <span class="stats-wip-lead-time"></span> |
+            <strong>Avg. utilisation:</strong> <span class="stats-utilisation"></span>%
+        </div>
+        <div class="bottom-menu">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a>WIP/LT/TH/UT</a></li>
+                <li role="presentation"><a>CFD</a></li>
+                <li role="presentation"><a>Scatterplot</a></li>
+                <li role="presentation"><a>Economics</a></li>
+            </ul>
+            <div class="simulation-littles-tab">
+            </div>
+            <div class="simulation-cfd-tab">
+                <div class="simulation-cfd"></div>
+                <div class="simulation-cfd-settings">
+                    Column grouping settings:
+                    <div class="simulation-cfd-settings-checkboxes"></div>
+                </div>
+            </div>
+            <div class="simulation-scatterplot-tab">
+            </div>
+            <div class="simulation-cod-tab">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="version">
+                <a href="https://github.com/mgajdzik/flow" target="_blank">v. 0.5.2</a>
+            </div>
+            <div class="copyright">
+                <a href="https://raw.githubusercontent.com/mgajdzik/flow/master/LICENSE" target="_blank">Copyright (c)
+                    2016 Mateusz Gajdzik</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

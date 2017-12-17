@@ -1,0 +1,20 @@
+For Trello APIExplorer feature related to tracking parent-child cards, card splitting.
+- Creating a checklist or multiple checklists allows "child" cards to be created by converting
+  a "checklist item" to a card using action: convertToCardFromCheckItem or without a using a Checklist
+  on a source card use the action: copyCard.
+
+   Card  -- copyCard -> cardCopy 1
+    |
+    |
+    ------- copyCard -> cardCopy 2  -- copyCard -> cardCopy 3
+                            |       
+                            |
+                             --------- copyCard -> cardCopy 4  -- copyCard -> cardCopy 5
+                                                       |
+                                                       |
+                                                        ------- ...        -> cardCopy 6 
+                                                       |
+                                                       |
+                                                        ------- ...        -> cardCopy 7
+Array [0 [1], etc nested
+

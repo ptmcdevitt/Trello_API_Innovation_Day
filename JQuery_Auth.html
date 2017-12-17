@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+            <style>
+            .memberContainer{
+                text-align:center;
+                display:inline-block;
+                font-size:large;
+                border-radius: 5px;
+                border:black solid 1px;
+                min-width:250px;
+                min-height:25px;
+                padding:5px;
+                margin:5px;
+            }
+            
+            .label{
+                display:inline-block;
+                border-radius: 5px;
+                min-width:50px;
+                padding-right:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <hr/>
+        <div id="outputContainer"></div>
+        <script>
+            $.noConflict();
+/* https://trello.com/1/authorize?key=22fbb4e676e9a972cb2f56f30e7530f3&scope=read&name=JQuery_Auth&expiration=never&response_type=token  
+   http://eimagine.com/working-with-the-trello-api/
+*/    
+    var basicToken = '07a5123810603cc3ffb654971fbc126e5e4dd5099484cd75bf0bb1cbc0528ba7';
+    var storedKey = '22fbb4e676e9a972cb2f56f30e7530f3';
+    
+    var colors = {
+        "green":"#61bd4f",
+        "yellow":"#f2d600",
+        "orange":"#ffab4a",
+        "red":"#eb5a46",
+        "purple":"#c377e0",
+        "blue":"#0079bf",
+        "sky":"#00c2e0"
+    };
+    
+    var threatSuccess = function(successMsg) {
+        var output ="";
+        jQuery.each(successMsg, function(index,value){
+            output += "<div class='memberContainer' style=''>";
+            jQuery.each(value.labels, function(subIndex,subValue){
+                output += " <div class='label' style='background-color:"+colors[subValue.color]
+                          +"'>"+subValue.name+"</div>";
+            });
+            output+="<br/>"+value.name+"</div>\r\n";
+        });
+        
+        jQuery('#outputContainer').append(output);
+    };
+    
+    var logError = function(errorMsg) {
+        console.log(errorMsg);
+    };
+   
+    jQuery(document).ready(function(){
+        Trello.setKey(storedKey);
+        Trello.setToken(basicToken);
+        Trello.get('/lists/51efd679a03d7ffa38002a94/cards', threatSuccess, logError);
+    });
+        </script>
+    </body>
+</html> 
+

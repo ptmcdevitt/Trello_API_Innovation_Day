@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  </head>
+  <body>
+ <div id="loggedout">
+    <a id="connectLink" href="#">Connect To Trello</a>
+</div>
+
+<div id="loggedin">
+    <div id="header">
+        Logged in to as <span id="fullName"></span> 
+        <a id=
+  </body>
+  
+<script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+ <script type="text/javascript"> 
+
+/* 
+http://jsfiddle.net/A3Xgk/2/
+
+NOTE: The Trello client library has been included as a Managed Resource.  To include the client library in your own code, you would include jQuery and then
+
+<script src="https://api.trello.com/1/client.js?key=your_application_key">...
+
+See https://trello.com/docs for a list of available API URLs
+
+The API development board is at https://trello.com/api
+
+The &dummy=.js part of the managed resource URL is required per http://doc.jsfiddle.net/basic/introduction.html#add-resources
+*/
+
+var onAuthorize = function() {
+    updateLoggedIn();
+    $("#output").empty();
+
+    Trello.members.get("me", function(member) {
+        $("#fullName").text(member.fullName);
+
+        var $cards = $("<div>").text("Loading Cards...").appendTo("#output");
+
+        // Output a list of all of the cards that the member 
+        // is assigned to
+        Trello.get("/boards/51efd679a03d7ffa38002a92/cards", function(cards) {
+            $cards.empty();
+            $.each(cards, function(ix, card) {
+                Trello.get("/cards/" + card.id + "/actions?filter=updateCard", function(change_card) {                    
+                    ago = moment(change_card[0].date.substr(0,10), "YYYY-MM-DD").fromNow().split(" ")[0];
+                    
+                    if(ago=="a") {ago=30};
+                    
+                    $("<div>").text(ago).appendTo("#output");
+                    debugger                
+                    Trello.post("cards/" + card.id + "/actions/comments", { 
+                        token: Trello.token(),
+                        key: Trello.key(),
+                        text: "This card has been in this list for " + ago + " days."})
+                    
+                    //Trello.put("cards/" + card.id + "/name", "(" + ago + ") " + card.name);                     
+                });
+                //Trello.get("/cards/" + card.id + "/actions?filter=createCard", function(change_card) {
+                //    $("<div>").text(moment(change_card[0].date.substr(0,10), "YYYY-MM-DD").fromNow()).appendTo("#output");
+                //});
+            });
+        });
+    });
+
+};
+
+var updateLoggedIn = function() {
+    var isLoggedIn = Trello.authorized();
+    $("#loggedout").toggle(!isLoggedIn);
+    $("#loggedin").toggle(isLoggedIn);
+};
+
+var logout = function() {
+    Trello.deauthorize();
+    updateLoggedIn();
+};
+
+Trello.authorize({
+    interactive: false,
+    success: onAuthorize
+});
+
+    updateLoggedIn();
+};
+
+Trello.authorize({
+    interactive: false,
+    success: onAuthorize
+});
+
+
+$("#connectLink").click(function() {
+    Trello.authorize({
+        type: "popup",
+        success: onAuthorize
+    });
+});
+
+$("#disconnect").click(logout);
+</script>
+</html>

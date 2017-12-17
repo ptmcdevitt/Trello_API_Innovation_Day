@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+   <head>
+    <title>A Trello Dashboard Lists by Board</title>
+    <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="favicon.ico" href="">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trello Dashboard - Lists by Board</h1>
+
+      <form class="form-horizontal" id="boards_form">
+        <div class="form-group">
+          <label class="control-label">Choose your board</label>
+            <select class="form-control" id="boards"></select>
+        </div>
+      </form>
+      
+           <div id="actions" style="color:green"></div>
+	  
+	  	 
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="https://api.trello.com/1/client.js?key=22fbb4e676e9a972cb2f56f30e7530f3"></script>
+  
+     <script type="text/javascript">
+	 // <div id="cards" ></div>
+        var cache = {};
+            $(function(){
+                function primeCache() {
+                    $('option').each(function(idx, option) {
+                        var boardId = $(option).val();
+                        cache[boardId] = {};
+                        Trello.get(
+                            '/boards/' + boardId + '/actions?filter=updateCard:idList',
+                            function(actions) {
+                                cache[boardId].actions = actions;
+                            },
+                            function() { console.log("Failed to load actions"); }
+                        );
+                    });
+                }
+    
+                var loadedBoards = function(boards) {
+                  $.each(boards, function(index, value) {
+                    $('#boards')
+                      .append($("<option></option>")
+                      .attr("value",value.id)
+                      .text(value.name));
+                  });
+    
+                  primeCache();
+                };
+                var loadBoards = function() {
+                  //Get the users boards
+                  Trello.get(
+                    // '/organizations/59653501f255607efd3a12d3/boards/',
+					'/members/me/boards/',
+                    loadedBoards,
+                    function() { console.log("Failed to load boards"); }
+                  );
+                };
+                   
+                 var loadedActions = function(actions) {
+                  $.each(actions, function(index, action) {
+                    var actionObj = $("<div id='actions'>" +
+                                        "<p" + "To:" + action.data.afterList + " From:" + action.data.beforeList + ">" +
+                                        "</p>" +
+                                        "<p>"   + "Type: " + action.type  + " " + action.date  +  "</p>" +
+                                    "</div>");
+                    $('#actions' + action.id).append(actionObj);
+                    console.log(action.data.afterList)
+                  });
+                };
+    
+                $('#boards').change(function() {
+                  var boardId = $("option:selected", this).val();
+                  $('#actions').empty();
+    
+                  var dataA = cache[boardId];
+                  loadedActions(dataA.actions);
+                   
+                  // Trello.get(
+                  //   '/boards/' + boardId + '/lists',
+                  //   loadedLists,
+                  //   function() { console.log("Failed to load lists"); }
+                  // );
+    
+                  // Trello.get(
+                  //   '/boards/' + boardId + '/cards',
+                  //   loadedCards,
+                  //   function() { console.log("Failed to load cards"); }
+                  // );
+                });
+    
+                Trello.authorize({
+                  type: "popup",
+                  name: "Trello dashboard",
+                  scope: {
+                    read: true,
+                    write: false },
+                  expiration: "never",
+                  success: loadBoards,
+                  error: function() { console.log("Failed authentication"); }
+                });
+            });
+    </script>
+ </html>
+
